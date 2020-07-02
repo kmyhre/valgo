@@ -19,6 +19,7 @@
 		93C871AB24ABCB46007D9C2A /* printParties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AA24ABCB46007D9C2A /* printParties.swift */; };
 		93C871AD24ABCB94007D9C2A /* sortParties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AC24ABCB94007D9C2A /* sortParties.swift */; };
 		93C871AF24ABCBDF007D9C2A /* calculateElection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AE24ABCBDF007D9C2A /* calculateElection.swift */; };
+		93C871B324AD1C92007D9C2A /* PartyTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		93C871AA24ABCB46007D9C2A /* printParties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = printParties.swift; sourceTree = "<group>"; };
 		93C871AC24ABCB94007D9C2A /* sortParties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortParties.swift; sourceTree = "<group>"; };
 		93C871AE24ABCBDF007D9C2A /* calculateElection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateElection.swift; sourceTree = "<group>"; };
+		93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTableDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,19 +72,44 @@
 			children = (
 				93C8718F24AB95AC007D9C2A /* AppDelegate.swift */,
 				93C8719124AB95AC007D9C2A /* SceneDelegate.swift */,
-				93C8719324AB95AC007D9C2A /* ViewController.swift */,
-				93C8719524AB95AC007D9C2A /* Main.storyboard */,
 				93C8719B24AB95AD007D9C2A /* Assets.xcassets */,
 				93C8719D24AB95AD007D9C2A /* LaunchScreen.storyboard */,
 				93C871A024AB95AD007D9C2A /* Info.plist */,
-				93C8719824AB95AC007D9C2A /* SLCalc.xcdatamodeld */,
+				93C871BE24AE4FBF007D9C2A /* Model */,
+				93C871BB24AE4F89007D9C2A /* View */,
+				93C871BC24AE4F9B007D9C2A /* Controller */,
+			);
+			path = SLCalc;
+			sourceTree = "<group>";
+		};
+		93C871BB24AE4F89007D9C2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93C8719524AB95AC007D9C2A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93C871BC24AE4F9B007D9C2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93C8719324AB95AC007D9C2A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		93C871BE24AE4FBF007D9C2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */,
 				93C871A624ABCB16007D9C2A /* Election.swift */,
 				93C871A824ABCB30007D9C2A /* Party.swift */,
+				93C8719824AB95AC007D9C2A /* SLCalc.xcdatamodeld */,
 				93C871AE24ABCBDF007D9C2A /* calculateElection.swift */,
 				93C871AA24ABCB46007D9C2A /* printParties.swift */,
 				93C871AC24ABCB94007D9C2A /* sortParties.swift */,
 			);
-			path = SLCalc;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +185,7 @@
 			files = (
 				93C8719424AB95AC007D9C2A /* ViewController.swift in Sources */,
 				93C871A724ABCB16007D9C2A /* Election.swift in Sources */,
+				93C871B324AD1C92007D9C2A /* PartyTableDataSource.swift in Sources */,
 				93C8719A24AB95AC007D9C2A /* SLCalc.xcdatamodeld in Sources */,
 				93C8719024AB95AC007D9C2A /* AppDelegate.swift in Sources */,
 				93C871AD24ABCB94007D9C2A /* sortParties.swift in Sources */,
