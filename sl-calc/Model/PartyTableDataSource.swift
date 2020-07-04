@@ -12,3 +12,4 @@ class PartyTableDataSource: NSObject, UITableViewDataSource {
         return cell
     }
 }
+ 
