@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  SLCalc
-//
-//  Created by Kristian Myhre on 30/06/2020.
-//  Copyright © 2020 Kristian Myhre. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
