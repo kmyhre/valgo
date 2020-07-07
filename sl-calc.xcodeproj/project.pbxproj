@@ -20,6 +20,7 @@
 		93C871AD24ABCB94007D9C2A /* sortParties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AC24ABCB94007D9C2A /* sortParties.swift */; };
 		93C871AF24ABCBDF007D9C2A /* calculateElection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AE24ABCBDF007D9C2A /* calculateElection.swift */; };
 		93C871B324AD1C92007D9C2A /* PartyTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */; };
+		93DD11EC24B4A2ED005DDAFB /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11EB24B4A2ED005DDAFB /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		93C871AC24ABCB94007D9C2A /* sortParties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortParties.swift; sourceTree = "<group>"; };
 		93C871AE24ABCBDF007D9C2A /* calculateElection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateElection.swift; sourceTree = "<group>"; };
 		93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTableDataSource.swift; sourceTree = "<group>"; };
+		93DD11EB24B4A2ED005DDAFB /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputView.swift; path = "sl-calc/InputView.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		93C871BB24AE4F89007D9C2A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93DD11EB24B4A2ED005DDAFB /* InputView.swift */,
 				93C8719524AB95AC007D9C2A /* Main.storyboard */,
 			);
 			path = View;
@@ -115,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93C8718B24AB95AC007D9C2A /* SLCalc */ = {
+		93C8718B24AB95AC007D9C2A /* sl-calc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93C871A324AB95AD007D9C2A /* Build configuration list for PBXNativeTarget "SLCalc" */;
+			buildConfigurationList = 93C871A324AB95AD007D9C2A /* Build configuration list for PBXNativeTarget "sl-calc" */;
 			buildPhases = (
 				93C8718824AB95AC007D9C2A /* Sources */,
 				93C8718924AB95AC007D9C2A /* Frameworks */,
@@ -127,7 +130,7 @@
 			);
 			dependencies = (
 			);
-			name = SLCalc;
+			name = "sl-calc";
 			productName = SLCalc;
 			productReference = 93C8718C24AB95AC007D9C2A /* sl-calc.app */;
 			productType = "com.apple.product-type.application";
@@ -160,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93C8718B24AB95AC007D9C2A /* SLCalc */,
+				93C8718B24AB95AC007D9C2A /* sl-calc */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +194,7 @@
 				93C871AD24ABCB94007D9C2A /* sortParties.swift in Sources */,
 				93C871A924ABCB30007D9C2A /* Party.swift in Sources */,
 				93C871AB24ABCB46007D9C2A /* printParties.swift in Sources */,
+				93DD11EC24B4A2ED005DDAFB /* InputView.swift in Sources */,
 				93C8719224AB95AC007D9C2A /* SceneDelegate.swift in Sources */,
 				93C871AF24ABCBDF007D9C2A /* calculateElection.swift in Sources */,
 			);
@@ -386,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93C871A324AB95AD007D9C2A /* Build configuration list for PBXNativeTarget "SLCalc" */ = {
+		93C871A324AB95AD007D9C2A /* Build configuration list for PBXNativeTarget "sl-calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93C871A424AB95AD007D9C2A /* Debug */,
