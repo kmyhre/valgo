@@ -1,3 +1,4 @@
+/*
 import UIKit
 
 class ViewController: UIViewController {
@@ -48,3 +49,4 @@ class ViewController: UIViewController {
 }
 
 var parties: [Party] = []
+*/

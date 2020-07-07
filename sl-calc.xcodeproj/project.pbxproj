@@ -21,6 +21,8 @@
 		93C871AF24ABCBDF007D9C2A /* calculateElection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AE24ABCBDF007D9C2A /* calculateElection.swift */; };
 		93C871B324AD1C92007D9C2A /* PartyTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */; };
 		93DD11EC24B4A2ED005DDAFB /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11EB24B4A2ED005DDAFB /* InputView.swift */; };
+		93DD11F224B4DC67005DDAFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F124B4DC67005DDAFB /* Constants.swift */; };
+		93DD11F424B4E59F005DDAFB /* AddParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F324B4E59F005DDAFB /* AddParty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		93C871AE24ABCBDF007D9C2A /* calculateElection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateElection.swift; sourceTree = "<group>"; };
 		93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTableDataSource.swift; sourceTree = "<group>"; };
 		93DD11EB24B4A2ED005DDAFB /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputView.swift; path = "sl-calc/InputView.swift"; sourceTree = SOURCE_ROOT; };
+		93DD11F124B4DC67005DDAFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = View/Constants.swift; sourceTree = "<group>"; };
+		93DD11F324B4E59F005DDAFB /* AddParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		93C8718E24AB95AC007D9C2A /* sl-calc */ = {
 			isa = PBXGroup;
 			children = (
+				93DD11F124B4DC67005DDAFB /* Constants.swift */,
 				93C8718F24AB95AC007D9C2A /* AppDelegate.swift */,
 				93C8719124AB95AC007D9C2A /* SceneDelegate.swift */,
 				93C8719B24AB95AD007D9C2A /* Assets.xcassets */,
@@ -90,6 +95,7 @@
 			children = (
 				93DD11EB24B4A2ED005DDAFB /* InputView.swift */,
 				93C8719524AB95AC007D9C2A /* Main.storyboard */,
+				93DD11F324B4E59F005DDAFB /* AddParty.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DD11F424B4E59F005DDAFB /* AddParty.swift in Sources */,
 				93C8719424AB95AC007D9C2A /* ViewController.swift in Sources */,
 				93C871A724ABCB16007D9C2A /* Election.swift in Sources */,
 				93C871B324AD1C92007D9C2A /* PartyTableDataSource.swift in Sources */,
@@ -197,6 +204,7 @@
 				93DD11EC24B4A2ED005DDAFB /* InputView.swift in Sources */,
 				93C8719224AB95AC007D9C2A /* SceneDelegate.swift in Sources */,
 				93C871AF24ABCBDF007D9C2A /* calculateElection.swift in Sources */,
+				93DD11F224B4DC67005DDAFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

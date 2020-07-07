@@ -1,22 +1,31 @@
 import Foundation
 
-class Party: Election {
+class Party: Identifiable {
 
     let partyName: String
     let votesCast: Int
     var remainingVotes: Float
     var currentDivisor: Float
     var seatsWon: Int = 0
+    var id: Int
     
-    init(name: String, votes: Int) {
+    // For formatting votes numbers
+    let formatter = NumberFormatter()
+    var votesFormatted: String {
+        return formatter.string(for: votesCast)!
+    }
+    
+    
+    init(name: String, votes: Int, identity: Int) {
+        id = identity
         partyName = name
         votesCast = votes
         remainingVotes = Float(votesCast)
         currentDivisor = 0
-        super.init()
+        formatter.numberStyle = NumberFormatter.Style.decimal
 
-        if modifiedMethod {
-            currentDivisor = Float(modifiedDivisor)
+                if Constants.modifiedMethod {
+            currentDivisor = Float(Constants.modifiedDivisor)
         } else {
             currentDivisor = 1
         }
@@ -29,7 +38,7 @@ class Party: Election {
     func seatWon() {
         seatsWon = seatsWon + 1
 
-        if currentDivisor == modifiedDivisor {
+        if currentDivisor == Constants.modifiedDivisor {
             currentDivisor = 3
         } else {
             currentDivisor = currentDivisor + 2

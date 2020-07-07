@@ -9,13 +9,53 @@
 import SwiftUI
 
 struct InputView: View {
+    
+
+    var parties: [Party] = testData
+    var election = Election(modified: true, seats: 18)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            NavigationView {
+                    List(parties) { party in
+                        partyCell(party: party)
+                    }
+                .navigationBarTitle("Parties")
+                .navigationBarItems(trailing:
+                    Button("New") {
+                        print("add tapped!")
+                        
+                    })
+            }
+            Button(action: {self.election.calculateElection()}) {
+                Text("Calculate election")
+            }
+        }
+        .onAppear {
+            Constants.partiesArray = self.parties
+        }
     }
 }
 
+
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        InputView()
+        InputView(parties: testData)
     }
 }
+
+
+struct partyCell: View {
+    var party: Party
+    var body: some View {
+        HStack {
+            Text(party.partyName)
+            Spacer()
+            Text("\(party.votesFormatted) votes")
+                .font(.footnote)
+            
+        }
+    }
+}
+
+
