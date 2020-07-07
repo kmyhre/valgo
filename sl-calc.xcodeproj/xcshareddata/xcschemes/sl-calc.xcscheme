@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "93C8718B24AB95AC007D9C2A"
                BuildableName = "sl-calc.app"
-               BlueprintName = "sl-calc"
+               BlueprintName = "SLCalc"
                ReferencedContainer = "container:sl-calc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93C8718B24AB95AC007D9C2A"
             BuildableName = "sl-calc.app"
-            BlueprintName = "sl-calc"
+            BlueprintName = "SLCalc"
             ReferencedContainer = "container:sl-calc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93C8718B24AB95AC007D9C2A"
             BuildableName = "sl-calc.app"
-            BlueprintName = "sl-calc"
+            BlueprintName = "SLCalc"
             ReferencedContainer = "container:sl-calc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
