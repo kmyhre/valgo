@@ -1,5 +1,8 @@
 import Foundation
 
+
+/*
+
 func calculateElection(seatsToAllocate: Int, partiesArray: [Party]) {
     var allocatedSeats = 0
     print("\nIn this election, \(seatsToAllocate) seats will be awarded according to each party's votes.")
@@ -15,3 +18,5 @@ func calculateElection(seatsToAllocate: Int, partiesArray: [Party]) {
         print("\(party.partyName): \(party.seatsWon) seats")
     }
 }
+
+ */

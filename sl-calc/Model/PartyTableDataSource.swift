@@ -1,4 +1,4 @@
-
+/*
 import UIKit
 
 class PartyTableDataSource: NSObject, UITableViewDataSource {
@@ -13,3 +13,4 @@ class PartyTableDataSource: NSObject, UITableViewDataSource {
     }
 }
  
+*/

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93192C5B24B89ED900EC8D10 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93192C5A24B89ED900EC8D10 /* SideBar.swift */; };
 		93C8719024AB95AC007D9C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8718F24AB95AC007D9C2A /* AppDelegate.swift */; };
 		93C8719224AB95AC007D9C2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8719124AB95AC007D9C2A /* SceneDelegate.swift */; };
 		93C8719424AB95AC007D9C2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8719324AB95AC007D9C2A /* ViewController.swift */; };
 		93C8719724AB95AC007D9C2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C8719524AB95AC007D9C2A /* Main.storyboard */; };
-		93C8719A24AB95AC007D9C2A /* sl-calc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93C8719824AB95AC007D9C2A /* sl-calc.xcdatamodeld */; };
 		93C8719C24AB95AD007D9C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C8719B24AB95AD007D9C2A /* Assets.xcassets */; };
 		93C8719F24AB95AD007D9C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C8719D24AB95AD007D9C2A /* LaunchScreen.storyboard */; };
 		93C871A724ABCB16007D9C2A /* Election.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871A624ABCB16007D9C2A /* Election.swift */; };
@@ -21,15 +21,17 @@
 		93C871AF24ABCBDF007D9C2A /* calculateElection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AE24ABCBDF007D9C2A /* calculateElection.swift */; };
 		93C871B324AD1C92007D9C2A /* PartyTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */; };
 		93DD11EC24B4A2ED005DDAFB /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11EB24B4A2ED005DDAFB /* InputView.swift */; };
+		93DD11F224B4DC67005DDAFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F124B4DC67005DDAFB /* Constants.swift */; };
+		93DD11F424B4E59F005DDAFB /* AddParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F324B4E59F005DDAFB /* AddParty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93192C5A24B89ED900EC8D10 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		93C8718C24AB95AC007D9C2A /* sl-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sl-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C8718F24AB95AC007D9C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C8719124AB95AC007D9C2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		93C8719324AB95AC007D9C2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93C8719624AB95AC007D9C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		93C8719924AB95AC007D9C2A /* SLCalc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SLCalc.xcdatamodel; sourceTree = "<group>"; };
 		93C8719B24AB95AD007D9C2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93C8719E24AB95AD007D9C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93C871A024AB95AD007D9C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		93C871AE24ABCBDF007D9C2A /* calculateElection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateElection.swift; sourceTree = "<group>"; };
 		93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTableDataSource.swift; sourceTree = "<group>"; };
 		93DD11EB24B4A2ED005DDAFB /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputView.swift; path = "sl-calc/InputView.swift"; sourceTree = SOURCE_ROOT; };
+		93DD11F124B4DC67005DDAFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = View/Constants.swift; sourceTree = "<group>"; };
+		93DD11F324B4E59F005DDAFB /* AddParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +76,12 @@
 		93C8718E24AB95AC007D9C2A /* sl-calc */ = {
 			isa = PBXGroup;
 			children = (
+				93DD11F124B4DC67005DDAFB /* Constants.swift */,
 				93C8718F24AB95AC007D9C2A /* AppDelegate.swift */,
 				93C8719124AB95AC007D9C2A /* SceneDelegate.swift */,
 				93C8719B24AB95AD007D9C2A /* Assets.xcassets */,
 				93C8719D24AB95AD007D9C2A /* LaunchScreen.storyboard */,
 				93C871A024AB95AD007D9C2A /* Info.plist */,
-				93C8719824AB95AC007D9C2A /* sl-calc.xcdatamodeld */,
 				93C871BE24AE4FBF007D9C2A /* Model */,
 				93C871BB24AE4F89007D9C2A /* View */,
 				93C871BC24AE4F9B007D9C2A /* Controller */,
@@ -89,7 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				93DD11EB24B4A2ED005DDAFB /* InputView.swift */,
+				93192C5A24B89ED900EC8D10 /* SideBar.swift */,
 				93C8719524AB95AC007D9C2A /* Main.storyboard */,
+				93DD11F324B4E59F005DDAFB /* AddParty.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,7 +148,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Kristian Myhre";
 				TargetAttributes = {
 					93C8718B24AB95AC007D9C2A = {
@@ -186,10 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DD11F424B4E59F005DDAFB /* AddParty.swift in Sources */,
 				93C8719424AB95AC007D9C2A /* ViewController.swift in Sources */,
+				93192C5B24B89ED900EC8D10 /* SideBar.swift in Sources */,
 				93C871A724ABCB16007D9C2A /* Election.swift in Sources */,
 				93C871B324AD1C92007D9C2A /* PartyTableDataSource.swift in Sources */,
-				93C8719A24AB95AC007D9C2A /* sl-calc.xcdatamodeld in Sources */,
 				93C8719024AB95AC007D9C2A /* AppDelegate.swift in Sources */,
 				93C871AD24ABCB94007D9C2A /* sortParties.swift in Sources */,
 				93C871A924ABCB30007D9C2A /* Party.swift in Sources */,
@@ -197,6 +204,7 @@
 				93DD11EC24B4A2ED005DDAFB /* InputView.swift in Sources */,
 				93C8719224AB95AC007D9C2A /* SceneDelegate.swift in Sources */,
 				93C871AF24ABCBDF007D9C2A /* calculateElection.swift in Sources */,
+				93DD11F224B4DC67005DDAFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +256,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -272,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -308,6 +317,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -326,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -400,19 +410,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		93C8719824AB95AC007D9C2A /* sl-calc.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				93C8719924AB95AC007D9C2A /* SLCalc.xcdatamodel */,
-			);
-			currentVersion = 93C8719924AB95AC007D9C2A /* SLCalc.xcdatamodel */;
-			path = "sl-calc.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 93C8718424AB95AC007D9C2A /* Project object */;
 }
