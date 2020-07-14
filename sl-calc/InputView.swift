@@ -10,29 +10,69 @@ import SwiftUI
 
 struct InputView: View {
     
+    @State var showingAdd = false
+    @State var showingPref = false
+    @State var election = Election()
+    @State var modifiedMethod: Bool = false
+    @State var firstDividend = "1.4"
 
-    var parties: [Party] = testData
-    var election = Election(modified: true, seats: 18)
     
     var body: some View {
+        
+        NavigationView {
+        
         VStack {
-            NavigationView {
-                    List(parties) { party in
+                List {
+                    ForEach (Constants.partiesArray) { party in
                         partyCell(party: party)
                     }
-                .navigationBarTitle("Parties")
-                .navigationBarItems(trailing:
-                    Button("New") {
-                        print("add tapped!")
-                        
-                    })
-            }
-            Button(action: {self.election.calculateElection()}) {
-                Text("Calculate election")
-            }
+                    HStack {
+                        Spacer()
+                        Text("\(Constants.partiesArray.count) parties")
+                            .foregroundColor(.secondary)
+                        Spacer()
+                    }
+                }
+                .listStyle(InsetGroupedListStyle())
+            
+        
+            
+        
+        Button(action: {self.election.calculateElection()}) {
+            Text("Calculate election")
         }
-        .onAppear {
-            Constants.partiesArray = self.parties
+        }
+        
+        
+                // First row of navbar shenanigans
+                .navigationBarTitle("Parties")
+                .navigationBarItems(
+                    leading:
+                        Button(action: {
+                            self.showingPref.toggle()
+                        }, label: {
+                            Image(systemName: "gear")
+                                .imageScale(.large)
+
+                        }).sheet(isPresented: $showingPref) {
+                            SideBar()
+                        }
+                    ,
+                    trailing:
+                        Button(action: {
+                            showingAdd = true
+                        }, label: {
+                            Image(systemName: "plus")
+                                .imageScale(.large)
+                        })
+                        .popover(isPresented: $showingAdd, attachmentAnchor: .point (UnitPoint.bottom), arrowEdge: .top) {
+                            AddParty(showingAdd: $showingAdd)
+                        }
+                        
+                )
+        
+                // Last row
+        
         }
     }
 }
@@ -40,7 +80,8 @@ struct InputView: View {
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        InputView(parties: testData)
+        InputView()
+            .preferredColorScheme(.light)
     }
 }
 
@@ -49,6 +90,7 @@ struct partyCell: View {
     var party: Party
     var body: some View {
         HStack {
+            
             Text(party.partyName)
             Spacer()
             Text("\(party.votesFormatted) votes")
@@ -57,5 +99,3 @@ struct partyCell: View {
         }
     }
 }
-
-

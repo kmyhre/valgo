@@ -9,23 +9,36 @@
 import SwiftUI
 
 struct AddParty: View {
+    
+    @State private var name: String = ""
+    @State private var votes: String = ""
+    @Binding var showingAdd: Bool
+    
     var body: some View {
         VStack {
-            HStack {
-                Text("Party:")
-                TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-            }
-            HStack {
-                Text("Votes:")
-                TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+
+            Form {
+                TextField("Party", text: $name)
+                TextField("Votes", text: $votes)
+                    .keyboardType(.numberPad)
+                Button(action: {
+                    if let votesInt = Int(votes) {
+                        Election.addParty(name: name, votes: votesInt)
+                        showingAdd = false
+                        
+                    }
+                }, label: {
+                    Text("Add Party")
+                })
             }
         }
         .padding()
     }
 }
 
-struct AddParty_Previews: PreviewProvider {
-    static var previews: some View {
-        AddParty()
-    }
-}
+
+//struct AddParty_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddParty(showingAdd: )
+//    }
+//}

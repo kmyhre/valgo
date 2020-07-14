@@ -2,13 +2,7 @@
 import Foundation
 
 class Election {
-    
-    init(modified: Bool, seats: Int) {
-        Constants.modifiedMethod = modified
-        Constants.seatsToAllocate = seats
-    }
-    
-    
+        
     
     func calculateElection() {
         var allocatedSeats = 0
@@ -24,6 +18,12 @@ class Election {
         for party in parties {
             print("\(party.partyName): \(party.seatsWon) seats")
         }
+    }
+    
+    static func addParty(name: String, votes: Int) {
+        Constants.partiesArray.append(Party(name: name, votes: votes, identity: Constants.currentID))
+        Constants.currentID += 1
+        print("Party added: \(name)")
     }
     
     

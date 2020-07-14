@@ -33,6 +33,8 @@ class Party: Identifiable {
         
         print("\(self.partyName) got \(self.votesCast) votes, and has \(self.remainingVotes) votes at first divisor \(currentDivisor).")
         
+        // This should change to calculating first divisor when «calculate election» is pressed, to avoid parties being added with different first divisors.
+        
     }
     
     func seatWon() {
@@ -48,4 +50,5 @@ class Party: Identifiable {
         print("\(self.partyName) won a seat. The party's new vote count is \(self.remainingVotes) at divisor \(self.currentDivisor), and this is seat number \(self.seatsWon) for this party.")
         
     }
+    
 }
