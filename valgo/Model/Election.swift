@@ -35,11 +35,12 @@ class Election: ObservableObject {
             
         }
         
-
+        // Reset data to prepare for subsequent executions
         var allocatedSeats = 0
         for party in partiesArray {
             party.seatsWon = 0
             party.icon = nil
+            party.nextQuotient = 0
         }
         print("\nIn this election, \(seatsToAllocate) seats will be awarded according to each party's votes.")
         
@@ -55,7 +56,7 @@ class Election: ObservableObject {
         
         // Find next party to be awarded a seat
         partiesArray = sortPartiesByNextQuotient(parties: partiesArray)
-        partiesArray[0].icon = "chevron.up.circle.fill"
+        partiesArray[0].icon = "chevron.up.circle"
         
         
         partiesArray = sortPartiesBySeats(parties: partiesArray)

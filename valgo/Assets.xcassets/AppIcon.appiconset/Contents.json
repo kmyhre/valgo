@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "filename" : "Artboard 140.png",
+      "filename" : "Artboard 1-40.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "Artboard 160.png",
+      "filename" : "Artboard 1-60.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -19,19 +19,19 @@
       "size" : "29x29"
     },
     {
-      "filename" : "Artboard 158.png",
+      "filename" : "Artboard 1-58.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "Artboard 187.png",
+      "filename" : "Artboard 1-87.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "Artboard 1-81.png",
+      "filename" : "Artboard 1-80.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
@@ -49,7 +49,7 @@
       "size" : "60x60"
     },
     {
-      "filename" : "Artboard 1180.png",
+      "filename" : "Artboard 1-180.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -61,7 +61,7 @@
       "size" : "20x20"
     },
     {
-      "filename" : "Artboard 1-40.png",
+      "filename" : "Artboard 1-41.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
@@ -73,43 +73,43 @@
       "size" : "29x29"
     },
     {
-      "filename" : "Artboard 1-58.png",
+      "filename" : "Artboard 1-59.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "Artboard 1-41.png",
+      "filename" : "Artboard 1-42.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
-      "filename" : "Artboard 1-80.png",
+      "filename" : "Artboard 1-81.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "Artboard 176.png",
+      "filename" : "Artboard 1-76.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
-      "filename" : "Artboard 1152.png",
+      "filename" : "Artboard 1-152.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
-      "filename" : "Artboard 1167.png",
+      "filename" : "Artboard 1-167.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "Artboard 11024.png",
+      "filename" : "Artboard 1-1024.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

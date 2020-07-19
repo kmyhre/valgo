@@ -24,6 +24,7 @@
 /* Begin PBXFileReference section */
 		93192C5A24B89ED900EC8D10 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		93557EE024C48162006682A0 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		93557EE224C49CD5006682A0 /* valgo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = valgo.entitlements; sourceTree = "<group>"; };
 		93BD692B24BE24D800219706 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		93C8718C24AB95AC007D9C2A /* valgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = valgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C8718F24AB95AC007D9C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		93C8718E24AB95AC007D9C2A /* valgo */ = {
 			isa = PBXGroup;
 			children = (
+				93557EE224C49CD5006682A0 /* valgo.entitlements */,
 				93DD11F124B4DC67005DDAFB /* Constants.swift */,
 				93C8718F24AB95AC007D9C2A /* AppDelegate.swift */,
 				93C8719124AB95AC007D9C2A /* SceneDelegate.swift */,
@@ -341,8 +343,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = valgo/valgo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "Beta 1";
 				DEVELOPMENT_TEAM = 97M86CPV88;
 				INFOPLIST_FILE = valgo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -354,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.kmyhre.valgo;
 				PRODUCT_NAME = valgo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,8 +368,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = valgo/valgo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "Beta 1";
 				DEVELOPMENT_TEAM = 97M86CPV88;
 				INFOPLIST_FILE = valgo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -376,6 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.kmyhre.valgo;
 				PRODUCT_NAME = valgo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
