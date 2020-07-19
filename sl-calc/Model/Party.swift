@@ -8,6 +8,7 @@ class Party: Identifiable, ObservableObject {
     let votesCast: Int
     var remainingVotes: Float
     var currentDivisor: Float
+    var nextQuotient: Int = 0
     var quotients: [(divisor: Float, quotient: Float)] = []
     var seatsWon: Int = 0
     var id: Int
@@ -40,18 +41,9 @@ class Party: Identifiable, ObservableObject {
         
     }
     
-    func seatWon(modifiedDivisor: Float) {
-        seatsWon = seatsWon + 1
-
-        if currentDivisor == modifiedDivisor {
-            currentDivisor = 3
-        } else {
-            currentDivisor = currentDivisor + 2
-        }
-        remainingVotes = Float(votesCast) / currentDivisor
-        
-        print("\(self.partyName) won a seat. The party's new vote count is \(self.remainingVotes) at divisor \(self.currentDivisor), and this is seat number \(self.seatsWon) for this party.")
-        
+    func seatWon() {
+        seatsWon += 1
+        nextQuotient += 1
+        print("\(self.partyName) won a seat.")
     }
-    
 }

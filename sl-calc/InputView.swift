@@ -30,6 +30,11 @@ struct InputView: View {
                     } label: {
                         Text("Populate with test data")
                     }
+                    Button {
+                        election.partiesArray = Constants.testData
+                    } label: {
+                        Text("Populate with Norwegian test data")
+                    }
 
                     HStack {
                         Spacer()
@@ -40,7 +45,7 @@ struct InputView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
                 
-                NavigationLink("Calculate election", destination: ResultsView())
+                NavigationLink("Calculate election", destination: ResultsView().environmentObject(election))
                     
                     // First row of navbar shenanigans
                     .navigationBarTitle("Parties")

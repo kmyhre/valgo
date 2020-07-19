@@ -8,7 +8,7 @@ class Election: ObservableObject {
         @Published var seatsToAllocate: Int = 10
         @Published var partiesArray: [Party] = []
         @Published var currentID: Int = 0
-    @Published var seatsAwarded: [(seat: Int, party: String)] = []
+        @Published var seatsAwarded: [(seat: Int, party: String)] = []
         
     
     func calculateElection() {
@@ -39,11 +39,16 @@ class Election: ObservableObject {
         
         // Todo: Export results to ElectionResults instance
         var allocatedSeats = 0
+        for party in partiesArray {
+            party.seatsWon = 0
+        }
         print("\nIn this election, \(seatsToAllocate) seats will be awarded according to each party's votes.")
+        
         while (allocatedSeats < seatsToAllocate) {
             allocatedSeats = allocatedSeats + 1
-            partiesArray = sortParties(parties: partiesArray)
-            partiesArray[0].seatWon(modifiedDivisor: modifiedDivisor)
+            partiesArray = sortPartiesByNextQuotient(parties: partiesArray)
+            partiesArray[0].seatWon()
+            seatsAwarded.append((seat: allocatedSeats, party: partiesArray[0].partyName))
         }
         
         print ("\nThe final results are:")
@@ -93,9 +98,16 @@ class Election: ObservableObject {
         }
     }
     
-    func sortParties(parties: [Party]) -> [Party] {
+    func sortPartiesByNextQuotient(parties: [Party]) -> [Party] {
         let tempParties = parties.sorted(by: { id, id2 in
-            return id.remainingVotes > id2.remainingVotes
+            return id.quotients[id.nextQuotient].quotient > id2.quotients[id2.nextQuotient].quotient
+        })
+        return tempParties
+    }
+    
+    func sortPartiesBySeats(parties: [Party]) -> [Party] {
+        let tempParties = parties.sorted(by: { id, id2 in
+            return id.seatsWon > id2.seatsWon
         })
         return tempParties
     }

@@ -10,13 +10,49 @@ import SwiftUI
 
 struct ResultsView: View {
     @EnvironmentObject var election: Election
-
+    
     var body: some View {
         NavigationView {
-            Text("Swell!")
-                .navigationTitle("Election results")
-        }.onAppear(perform: election.calculateElection)
+            List {
+                Section {
+                    HStack {
+                        Spacer()
+                        Text("Seats per party")
+                        Spacer()
+                    }
+                    ForEach (election.partiesArray, id: \.id) { party in
+                        HStack {
+                            Text(party.partyName)
+                            Spacer()
+                            if party.seatsWon == 1 {
+                                Text("\(party.seatsWon) seat")
+                            } else {
+                                Text("\(party.seatsWon) seats")
+                            }
+                        }
+                    }
+                    
+                }
+                Section {
+                    HStack {
+                        Spacer()
+                        Text("Allocation of seats")
+                        Spacer()
+                    }
+                    ForEach (election.seatsAwarded, id: \.seat) { currentSeat in
+                        HStack {
+                            Text("Seat \(String(currentSeat.seat)):")
+                            Spacer()
+                            Text(currentSeat.party)
+                        }
+                        
+                    }
+                }
+            }.onAppear(perform: election.calculateElection)
+            .listStyle(InsetGroupedListStyle())
+            .navigationBarTitle("Election Results")
 
+        }
     }
 }
 
