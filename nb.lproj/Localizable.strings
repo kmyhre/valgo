@@ -1,7 +1,58 @@
-/* 
-  Localizable.strings
-  sl-calc
+/* No comment provided by engineer. */
+"%@ parties" = "%@ partier";
 
-  Created by Kristian Myhre on 19/07/2020.
-  Copyright © 2020 Kristian Myhre. All rights reserved.
-*/
+/* No comment provided by engineer. */
+"%@ seat" = "%@ mandat";
+
+/* No comment provided by engineer. */
+"%@ seats" = "%@ mandater";
+
+/* No comment provided by engineer. */
+"%@ votes" = "%@ stemmer";
+
+/* No comment provided by engineer. */
+"Add a party using the + button" = "Trykk på + for å legge til et parti";
+
+/* No comment provided by engineer. */
+"Add Party" = "Legg til parti";
+
+/* No comment provided by engineer. */
+"Allocation of seats" = "Tildeling av mandat";
+
+/* No comment provided by engineer. */
+"Dismiss" = "Lagre";
+
+/* No comment provided by engineer. */
+"First dividend:" = "Første dividend";
+
+/* No comment provided by engineer. */
+"Hello, World!" = "Hei verda";
+
+/* No comment provided by engineer. */
+"Party" = "Parti";
+
+/* No comment provided by engineer. */
+"Populate with Norwegian test data" = "Sett inn norske testdata";
+
+/* No comment provided by engineer. */
+"Populate with test data" = "Sett inn engelske testdata";
+
+/* No comment provided by engineer. */
+"Seat %@:" = "Mandat %@:";
+
+/* No comment provided by engineer. */
+"Seats per party" = "Mandat per parti";
+
+/* No comment provided by engineer. */
+"Seats to allocate" = "Mandater i valget";
+
+/* No comment provided by engineer. */
+"Votes" = "Stemmer";
+
+"Parties" = "Partier";
+
+"Calculate Election" = "Gjennomfør valg";
+
+"Settings" = "Innstillinger";
+
+"Election Results" = "Valgresultat";

@@ -52,7 +52,8 @@ struct ResultsView: View {
                     }
                 }
             }.onAppear(perform: election.calculateElection)
-            .listStyle(InsetGroupedListStyle())
+            //.listStyle(InsetGroupedListStyle())
+            .listStyle(GroupedListStyle())
             .navigationBarTitle("Election Results")
     }
 }

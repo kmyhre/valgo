@@ -17,59 +17,63 @@ struct SideBar: View {
     
     var body: some View {
         
-        VStack {
-            List {
-                Section {
-                    HStack {
-                        Text("Seats to allocate")
-                            .foregroundColor(.gray)
-                        Spacer()
-                        TextField("", text: $seatsToAllocateString)
-                            .keyboardType(.numberPad)
-                            .multilineTextAlignment(.trailing)
-                            .onChange(of: seatsToAllocateString) { value in
-                                if let seatsInteger = Int(value) {
-                                    election.seatsToAllocate = seatsInteger
-                                    print("election.seatsToAllocate is now \(election.seatsToAllocate)")
+        NavigationView {
+            VStack {
+                
+                List {
+                    Section() {
+                        HStack {
+                            Text("Seats to allocate")
+                                .foregroundColor(.gray)
+                            Spacer()
+                            TextField("", text: $seatsToAllocateString)
+                                .keyboardType(.numberPad)
+                                .multilineTextAlignment(.trailing)
+                                .onChange(of: seatsToAllocateString) { value in
+                                    if let seatsInteger = Int(value) {
+                                        election.seatsToAllocate = seatsInteger
+                                        print("election.seatsToAllocate is now \(election.seatsToAllocate)")
+                                    }
                                 }
+                            
+                        }
+                        Toggle("Modified method", isOn: $election.modifiedMethod )
+                            .foregroundColor(.gray)
+                            .onChange(of: election.modifiedMethod) { value in
+                                election.modifiedMethod = value
+                                print("Modified method is now \(value)")
                             }
                         
-                    }
-                    Toggle("Modified method", isOn: $election.modifiedMethod )
-                        .foregroundColor(.gray)
-                        .onChange(of: election.modifiedMethod) { value in
-                            election.modifiedMethod = value
-                            print("Modified method is now \(value)")
-                        }
-                    
-                    HStack {
-                        Text("First dividend:")
-                            .foregroundColor(.gray)
-                        Spacer()
-                        TextField("", text: $modifiedDivisorString)
-                            .multilineTextAlignment(.trailing)
-                            .keyboardType(.decimalPad)
-                            .disabled(!election.modifiedMethod)
-                            .onChange(of: modifiedDivisorString) { value in
-                                if let floatValue = Float(value) {
-                                    election.modifiedDivisor = floatValue
-                                    print("election.modifiedDivisor is now \(election.modifiedDivisor) (\(floatValue))")
+                        HStack {
+                            Text("First dividend:")
+                                .foregroundColor(.gray)
+                            Spacer()
+                            TextField("", text: $modifiedDivisorString)
+                                .multilineTextAlignment(.trailing)
+                                .keyboardType(.decimalPad)
+                                .disabled(!election.modifiedMethod)
+                                .onChange(of: modifiedDivisorString) { value in
+                                    if let floatValue = Float(value) {
+                                        election.modifiedDivisor = floatValue
+                                        print("election.modifiedDivisor is now \(election.modifiedDivisor) (\(floatValue))")
+                                    }
                                 }
-                            }
+                        }
+                    }
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            showingPref.toggle()
+                        }, label: {
+                            Text("Dismiss")
+                        })
+                        Spacer()
                     }
                 }
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        showingPref.toggle()
-                    }, label: {
-                        Text("Dismiss")
-                })
-                    Spacer()
-                }
+                //.listStyle(InsetGroupedListStyle())
+                .listStyle(GroupedListStyle())
+                .navigationTitle("Settings")
             }
-            .listStyle(InsetGroupedListStyle())
-            
         }
     }
     

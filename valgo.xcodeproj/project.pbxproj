@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		93192C5A24B89ED900EC8D10 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
-		93557EE024C48162006682A0 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputView.swift; path = valgo/InputView.swift; sourceTree = "<group>"; };
+		93557EE024C48162006682A0 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		93BD692B24BE24D800219706 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		93C8718C24AB95AC007D9C2A /* valgo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = valgo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C8718F24AB95AC007D9C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +33,6 @@
 		93C871A024AB95AD007D9C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C871A624ABCB16007D9C2A /* Election.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Election.swift; sourceTree = "<group>"; };
 		93C871A824ABCB30007D9C2A /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
-		93DD11EB24B4A2ED005DDAFB /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputView.swift; path = "sl-calc/InputView.swift"; sourceTree = SOURCE_ROOT; };
 		93DD11F124B4DC67005DDAFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = View/Constants.swift; sourceTree = "<group>"; };
 		93DD11F324B4E59F005DDAFB /* AddParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParty.swift; sourceTree = "<group>"; };
 		93E2D74124C46FD60085E2B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -55,7 +54,6 @@
 		93C8718324AB95AC007D9C2A = {
 			isa = PBXGroup;
 			children = (
-				93557EE024C48162006682A0 /* InputView.swift */,
 				93E2D74224C46FD60085E2B3 /* Localizable.strings */,
 				93C8718E24AB95AC007D9C2A /* valgo */,
 				93C8718D24AB95AC007D9C2A /* Products */,
@@ -89,7 +87,7 @@
 		93C871BB24AE4F89007D9C2A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				93DD11EB24B4A2ED005DDAFB /* InputView.swift */,
+				93557EE024C48162006682A0 /* InputView.swift */,
 				93BD692B24BE24D800219706 /* ResultsView.swift */,
 				93192C5A24B89ED900EC8D10 /* SideBar.swift */,
 				93DD11F324B4E59F005DDAFB /* AddParty.swift */,
@@ -347,7 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97M86CPV88;
 				INFOPLIST_FILE = valgo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,7 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97M86CPV88;
 				INFOPLIST_FILE = valgo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

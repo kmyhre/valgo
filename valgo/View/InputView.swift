@@ -26,8 +26,8 @@ struct InputView: View {
                         partyCell(party: party)
                     }
                     
+                    #if targetEnvironment(simulator)
                     // Testing area begin
-                    Text("bear", comment: "Name of an animal")
                     Button {
                         election.partiesArray = Constants.alternativTestData
                     } label: {
@@ -38,25 +38,26 @@ struct InputView: View {
                     } label: {
                         Text("Populate with Norwegian test data")
                     }
-                    
+
                     // Testing area end
-                    
-                        HStack {
-                            Spacer()
-                            if election.partiesArray.isEmpty {
+                    #endif
+
+                    HStack {
+                        Spacer()
+                        if election.partiesArray.isEmpty {
                             Text("Add a party using the + button")
                                 .foregroundColor(.secondary)
-                            } else {
-                                Text("\(election.partiesArray.count) parties")
-                                    .foregroundColor(.secondary)
-                            }
-
-                            Spacer()
+                        } else {
+                            Text("\(election.partiesArray.count) parties")
+                                .foregroundColor(.secondary)
                         }
-
-                    
+                        Spacer()
+                    }
                 }
-                .listStyle(InsetGroupedListStyle())
+                
+             //   .listStyle(InsetGroupedListStyle())
+                .listStyle(GroupedListStyle())
+                
                 // First row of navbar shenanigans
                 .navigationBarTitle(LocalizedStringKey("Parties"))
                 .navigationBarItems(
@@ -69,7 +70,7 @@ struct InputView: View {
                         }.sheet(isPresented: $showingPref) {
                             SideBar(showingPref: $showingPref).environmentObject(election)
                         }
-
+                        
                         .padding(),
                     trailing:
                         Button(action: {
