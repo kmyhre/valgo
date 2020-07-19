@@ -10,12 +10,9 @@ import SwiftUI
 
 struct SideBar: View {
     
-    var modifiedMethod: Bool = Constants.modifiedMethod
-    var firstDividend: Float = Constants.modifiedDivisor
-    var seatsToAllocate: Int = Constants.seatsToAllocate
-    @State var currentModifiedMethod = false
-    @State var currentFirstDividend = "1.4"
-    @State var seatsToAllocateInt = String(Constants.seatsToAllocate)
+    @EnvironmentObject var election: Election
+    @State var modifiedDivisorString: String = "1.4"
+    @State var seatsToAllocateString: String = "10"
     
     var body: some View {
         
@@ -24,38 +21,41 @@ struct SideBar: View {
                 Section {
                     HStack {
                         Text("Seats to allocate")
+                            .foregroundColor(.gray)
                         Spacer()
-                        TextField("", text: $seatsToAllocateInt)
+                        TextField("", text: $seatsToAllocateString)
                             .keyboardType(.numberPad)
                             .multilineTextAlignment(.trailing)
-                            .onChange(of: seatsToAllocateInt) { value in
+                            .onChange(of: seatsToAllocateString) { value in
                                 if let seatsInteger = Int(value) {
-                                    Constants.seatsToAllocate = seatsInteger
-                                    print("Constants.seatsToAllocate is now \(Constants.seatsToAllocate)")
+                                    election.seatsToAllocate = seatsInteger
+                                    print("election.seatsToAllocate is now \(election.seatsToAllocate)")
                                 }
                             }
-                            
+
                     }
-                    Toggle("Modified method?!!", isOn: $currentModifiedMethod )
-                        .onChange(of: currentModifiedMethod) { value in
-                            Constants.modifiedMethod = value
+                    Toggle("Modified method", isOn: $election.modifiedMethod )
+                        .foregroundColor(.gray)
+                        .onChange(of: election.modifiedMethod) { value in
+                            election.modifiedMethod = value
                             print("Modified method is now \(value)")
                         }
                         
                     HStack {
                         Text("First dividend:")
+                            .foregroundColor(.gray)
                         Spacer()
-                        TextField("", text: $currentFirstDividend)
+                        TextField("", text: $modifiedDivisorString)
                             .multilineTextAlignment(.trailing)
                             .keyboardType(.decimalPad)
-                            .disabled(!currentModifiedMethod)
-                            .onChange(of: currentFirstDividend) { value in
+                            .disabled(!election.modifiedMethod)
+                            .onChange(of: modifiedDivisorString) { value in
                                 if let floatValue = Float(value) {
-                                    Constants.modifiedDivisor = floatValue
-                                    print("Modified divisor is now \(floatValue)")
+                                    election.modifiedDivisor = floatValue
+                                    print("election.modifiedDivisor is now \(election.modifiedDivisor) (\(floatValue))")
                                 }
                             }
-                            
+
 
                     }
                     Text("")

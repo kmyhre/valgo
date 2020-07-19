@@ -1,11 +1,14 @@
 import Foundation
+import SwiftUI
 
-class Party: Identifiable {
+class Party: Identifiable, ObservableObject {
 
+    
     let partyName: String
     let votesCast: Int
     var remainingVotes: Float
     var currentDivisor: Float
+    var quotients: [(divisor: Float, quotient: Float)] = []
     var seatsWon: Int = 0
     var id: Int
     
@@ -24,23 +27,23 @@ class Party: Identifiable {
         currentDivisor = 0
         formatter.numberStyle = NumberFormatter.Style.decimal
 
-                if Constants.modifiedMethod {
-            currentDivisor = Float(Constants.modifiedDivisor)
-        } else {
-            currentDivisor = 1
-        }
-        remainingVotes = Float(votesCast) / currentDivisor
-        
-        print("\(self.partyName) got \(self.votesCast) votes, and has \(self.remainingVotes) votes at first divisor \(currentDivisor).")
+//        if modifiedMethod {
+//            currentDivisor = Float(modifiedDivisor)
+//        } else {
+//            currentDivisor = 1
+//        }
+//        remainingVotes = Float(votesCast) / currentDivisor
+//
+//        print("\(self.partyName) got \(self.votesCast) votes, and has \(self.remainingVotes) votes at first divisor \(currentDivisor).")
         
         // This should change to calculating first divisor when «calculate election» is pressed, to avoid parties being added with different first divisors.
         
     }
     
-    func seatWon() {
+    func seatWon(modifiedDivisor: Float) {
         seatsWon = seatsWon + 1
 
-        if currentDivisor == Constants.modifiedDivisor {
+        if currentDivisor == modifiedDivisor {
             currentDivisor = 3
         } else {
             currentDivisor = currentDivisor + 2

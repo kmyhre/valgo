@@ -8,42 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		93192C5B24B89ED900EC8D10 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93192C5A24B89ED900EC8D10 /* SideBar.swift */; };
+		93BD692C24BE24D800219706 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BD692B24BE24D800219706 /* ResultsView.swift */; };
 		93C8719024AB95AC007D9C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8718F24AB95AC007D9C2A /* AppDelegate.swift */; };
 		93C8719224AB95AC007D9C2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8719124AB95AC007D9C2A /* SceneDelegate.swift */; };
-		93C8719424AB95AC007D9C2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8719324AB95AC007D9C2A /* ViewController.swift */; };
-		93C8719724AB95AC007D9C2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C8719524AB95AC007D9C2A /* Main.storyboard */; };
 		93C8719C24AB95AD007D9C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C8719B24AB95AD007D9C2A /* Assets.xcassets */; };
 		93C8719F24AB95AD007D9C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C8719D24AB95AD007D9C2A /* LaunchScreen.storyboard */; };
 		93C871A724ABCB16007D9C2A /* Election.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871A624ABCB16007D9C2A /* Election.swift */; };
 		93C871A924ABCB30007D9C2A /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871A824ABCB30007D9C2A /* Party.swift */; };
-		93C871AB24ABCB46007D9C2A /* printParties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AA24ABCB46007D9C2A /* printParties.swift */; };
-		93C871AD24ABCB94007D9C2A /* sortParties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AC24ABCB94007D9C2A /* sortParties.swift */; };
-		93C871AF24ABCBDF007D9C2A /* calculateElection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871AE24ABCBDF007D9C2A /* calculateElection.swift */; };
-		93C871B324AD1C92007D9C2A /* PartyTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */; };
 		93DD11EC24B4A2ED005DDAFB /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11EB24B4A2ED005DDAFB /* InputView.swift */; };
 		93DD11F224B4DC67005DDAFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F124B4DC67005DDAFB /* Constants.swift */; };
 		93DD11F424B4E59F005DDAFB /* AddParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F324B4E59F005DDAFB /* AddParty.swift */; };
+		93E2D73C24C3A7D60085E2B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E2D73B24C3A7D60085E2B3 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93192C5A24B89ED900EC8D10 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		93BD692B24BE24D800219706 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		93C8718C24AB95AC007D9C2A /* sl-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sl-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C8718F24AB95AC007D9C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C8719124AB95AC007D9C2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93C8719324AB95AC007D9C2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93C8719624AB95AC007D9C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93C8719B24AB95AD007D9C2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93C8719E24AB95AD007D9C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93C871A024AB95AD007D9C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C871A624ABCB16007D9C2A /* Election.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Election.swift; sourceTree = "<group>"; };
 		93C871A824ABCB30007D9C2A /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
-		93C871AA24ABCB46007D9C2A /* printParties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = printParties.swift; sourceTree = "<group>"; };
-		93C871AC24ABCB94007D9C2A /* sortParties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortParties.swift; sourceTree = "<group>"; };
-		93C871AE24ABCBDF007D9C2A /* calculateElection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateElection.swift; sourceTree = "<group>"; };
-		93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTableDataSource.swift; sourceTree = "<group>"; };
 		93DD11EB24B4A2ED005DDAFB /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputView.swift; path = "sl-calc/InputView.swift"; sourceTree = SOURCE_ROOT; };
 		93DD11F124B4DC67005DDAFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = View/Constants.swift; sourceTree = "<group>"; };
 		93DD11F324B4E59F005DDAFB /* AddParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParty.swift; sourceTree = "<group>"; };
+		93E2D73B24C3A7D60085E2B3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				93DD11EB24B4A2ED005DDAFB /* InputView.swift */,
+				93BD692B24BE24D800219706 /* ResultsView.swift */,
 				93192C5A24B89ED900EC8D10 /* SideBar.swift */,
-				93C8719524AB95AC007D9C2A /* Main.storyboard */,
 				93DD11F324B4E59F005DDAFB /* AddParty.swift */,
 			);
 			path = View;
@@ -103,7 +95,7 @@
 		93C871BC24AE4F9B007D9C2A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				93C8719324AB95AC007D9C2A /* ViewController.swift */,
+				93E2D73B24C3A7D60085E2B3 /* Main.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,12 +103,8 @@
 		93C871BE24AE4FBF007D9C2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				93C871B224AD1C92007D9C2A /* PartyTableDataSource.swift */,
 				93C871A624ABCB16007D9C2A /* Election.swift */,
 				93C871A824ABCB30007D9C2A /* Party.swift */,
-				93C871AE24ABCBDF007D9C2A /* calculateElection.swift */,
-				93C871AA24ABCB46007D9C2A /* printParties.swift */,
-				93C871AC24ABCB94007D9C2A /* sortParties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,8 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C8719F24AB95AD007D9C2A /* LaunchScreen.storyboard in Resources */,
+				93E2D73C24C3A7D60085E2B3 /* Main.storyboard in Resources */,
 				93C8719C24AB95AD007D9C2A /* Assets.xcassets in Resources */,
-				93C8719724AB95AC007D9C2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,17 +181,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				93DD11F424B4E59F005DDAFB /* AddParty.swift in Sources */,
-				93C8719424AB95AC007D9C2A /* ViewController.swift in Sources */,
 				93192C5B24B89ED900EC8D10 /* SideBar.swift in Sources */,
 				93C871A724ABCB16007D9C2A /* Election.swift in Sources */,
-				93C871B324AD1C92007D9C2A /* PartyTableDataSource.swift in Sources */,
 				93C8719024AB95AC007D9C2A /* AppDelegate.swift in Sources */,
-				93C871AD24ABCB94007D9C2A /* sortParties.swift in Sources */,
 				93C871A924ABCB30007D9C2A /* Party.swift in Sources */,
-				93C871AB24ABCB46007D9C2A /* printParties.swift in Sources */,
 				93DD11EC24B4A2ED005DDAFB /* InputView.swift in Sources */,
 				93C8719224AB95AC007D9C2A /* SceneDelegate.swift in Sources */,
-				93C871AF24ABCBDF007D9C2A /* calculateElection.swift in Sources */,
+				93BD692C24BE24D800219706 /* ResultsView.swift in Sources */,
 				93DD11F224B4DC67005DDAFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93C8719524AB95AC007D9C2A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93C8719624AB95AC007D9C2A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93C8719D24AB95AD007D9C2A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

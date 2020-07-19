@@ -12,90 +12,85 @@ struct InputView: View {
     
     @State var showingAdd = false
     @State var showingPref = false
-    @State var election = Election()
     @State var modifiedMethod: Bool = false
-    @State var firstDividend = "1.4"
-
+    @EnvironmentObject var election: Election
+    
     
     var body: some View {
         
         NavigationView {
-        
-        VStack {
+            
+            VStack {
                 List {
-                    ForEach (Constants.partiesArray) { party in
+                    ForEach (election.partiesArray) { party in
                         partyCell(party: party)
                     }
+                    Button {
+                        election.partiesArray = Constants.alternativTestData
+                    } label: {
+                        Text("Populate with test data")
+                    }
+
                     HStack {
                         Spacer()
-                        Text("\(Constants.partiesArray.count) parties")
+                        Text("\(election.partiesArray.count) parties")
                             .foregroundColor(.secondary)
                         Spacer()
                     }
                 }
                 .listStyle(InsetGroupedListStyle())
-            
-        
-            
-        
-        Button(action: {self.election.calculateElection()}) {
-            Text("Calculate election")
-        }
-        }
-        
-        
-                // First row of navbar shenanigans
-                .navigationBarTitle("Parties")
-                .navigationBarItems(
-                    leading:
-                        Button(action: {
-                            self.showingPref.toggle()
-                        }, label: {
-                            Image(systemName: "gear")
-                                .imageScale(.large)
+                
+                NavigationLink("Calculate election", destination: ResultsView())
+                    
+                    // First row of navbar shenanigans
+                    .navigationBarTitle("Parties")
+                    .navigationBarItems(
+                        leading:
+                            NavigationLink(
+                                destination: SideBar(),
+                                isActive: $showingPref,
+                                label: {
+                                    Image(systemName: "gear")
+                                        .imageScale(.large)
+                                })
+                            .padding(),
+                        trailing:
+                            Button(action: {
+                                self.showingAdd.toggle()
+                            }) {
+                                Image(systemName: "plus")
+                            }.sheet(isPresented: $showingAdd) {
+                                AddParty(showingAdd: $showingAdd).environmentObject(election)
+                            }
 
-                        }).sheet(isPresented: $showingPref) {
-                            SideBar()
-                        }
-                    ,
-                    trailing:
-                        Button(action: {
-                            showingAdd = true
-                        }, label: {
-                            Image(systemName: "plus")
-                                .imageScale(.large)
-                        })
-                        .popover(isPresented: $showingAdd, attachmentAnchor: .point (UnitPoint.bottom), arrowEdge: .top) {
-                            AddParty(showingAdd: $showingAdd)
-                        }
-                        
-                )
-        
-                // Last row
-        
+                            
+                            
+                    )
+            }
         }
     }
 }
-
-
-struct InputView_Previews: PreviewProvider {
-    static var previews: some View {
-        InputView()
-            .preferredColorScheme(.light)
-    }
-}
-
-
-struct partyCell: View {
-    var party: Party
-    var body: some View {
-        HStack {
-            
-            Text(party.partyName)
-            Spacer()
-            Text("\(party.votesFormatted) votes")
-                .font(.footnote)
-            
+    
+    
+    struct InputView_Previews: PreviewProvider {
+        static var previews: some View {
+            InputView()
+                .preferredColorScheme(.light)
         }
     }
-}
+    
+    
+    struct partyCell: View {
+        var party: Party
+        var body: some View {
+            HStack {
+                
+                Text(party.partyName)
+                Spacer()
+                Text("\(party.votesFormatted) votes")
+                    .font(.footnote)
+                
+            }
+        }
+    }
+

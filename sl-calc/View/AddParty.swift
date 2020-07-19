@@ -13,27 +13,33 @@ struct AddParty: View {
     @State private var name: String = ""
     @State private var votes: String = ""
     @Binding var showingAdd: Bool
+    @EnvironmentObject var election: Election
+
     
     var body: some View {
-        VStack {
-
-            Form {
-                TextField("Party", text: $name)
-                TextField("Votes", text: $votes)
-                    .keyboardType(.numberPad)
-                Button(action: {
-                    if let votesInt = Int(votes) {
-                        Election.addParty(name: name, votes: votesInt)
-                        showingAdd = false
-                        
-                    }
-                }, label: {
-                    Text("Add Party")
-                })
+        NavigationView {
+            VStack {
+                Form {
+                    TextField("Party", text: $name)
+                    TextField("Votes", text: $votes)
+                        .keyboardType(.numberPad)
+                    Button(action: {
+                        if let votesInt = Int(votes) {
+                            
+                            election.addParty(name: name, votes: votesInt)
+                            
+                            showingAdd.toggle()
+                            
+                        }
+                    }, label: {
+                        Text("Add Party")
+                    })
+                }
             }
+            .navigationBarTitle("Add Party")
         }
-        .padding()
     }
+        
 }
 
 
