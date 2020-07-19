@@ -18,7 +18,6 @@
 		93DD11EC24B4A2ED005DDAFB /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11EB24B4A2ED005DDAFB /* InputView.swift */; };
 		93DD11F224B4DC67005DDAFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F124B4DC67005DDAFB /* Constants.swift */; };
 		93DD11F424B4E59F005DDAFB /* AddParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F324B4E59F005DDAFB /* AddParty.swift */; };
-		93E2D73C24C3A7D60085E2B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E2D73B24C3A7D60085E2B3 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		93DD11EB24B4A2ED005DDAFB /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputView.swift; path = "sl-calc/InputView.swift"; sourceTree = SOURCE_ROOT; };
 		93DD11F124B4DC67005DDAFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = View/Constants.swift; sourceTree = "<group>"; };
 		93DD11F324B4E59F005DDAFB /* AddParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParty.swift; sourceTree = "<group>"; };
-		93E2D73B24C3A7D60085E2B3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,6 @@
 		93C871BC24AE4F9B007D9C2A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				93E2D73B24C3A7D60085E2B3 /* Main.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,7 +165,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C8719F24AB95AD007D9C2A /* LaunchScreen.storyboard in Resources */,
-				93E2D73C24C3A7D60085E2B3 /* Main.storyboard in Resources */,
 				93C8719C24AB95AD007D9C2A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97M86CPV88;
 				INFOPLIST_FILE = "sl-calc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,6 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97M86CPV88;
 				INFOPLIST_FILE = "sl-calc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

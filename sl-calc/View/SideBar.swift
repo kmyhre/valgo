@@ -13,6 +13,7 @@ struct SideBar: View {
     @EnvironmentObject var election: Election
     @State var modifiedDivisorString: String = "1.4"
     @State var seatsToAllocateString: String = "10"
+    @Binding var showingPref: Bool
     
     var body: some View {
         
@@ -32,7 +33,7 @@ struct SideBar: View {
                                     print("election.seatsToAllocate is now \(election.seatsToAllocate)")
                                 }
                             }
-
+                        
                     }
                     Toggle("Modified method", isOn: $election.modifiedMethod )
                         .foregroundColor(.gray)
@@ -40,7 +41,7 @@ struct SideBar: View {
                             election.modifiedMethod = value
                             print("Modified method is now \(value)")
                         }
-                        
+                    
                     HStack {
                         Text("First dividend:")
                             .foregroundColor(.gray)
@@ -55,24 +56,17 @@ struct SideBar: View {
                                     print("election.modifiedDivisor is now \(election.modifiedDivisor) (\(floatValue))")
                                 }
                             }
-
-
-                    }
-                    Text("")
-                    Text("Text")
-                    HStack {
-                        Spacer()
-                        Button("Button") {}
-                            .foregroundColor(Color(UIColor.link))
-                        Spacer()
                     }
                 }
-
-                
-                Section {
-                    Text("Meh")
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        showingPref.toggle()
+                    }, label: {
+                        Text("Dismiss")
+                })
+                    Spacer()
                 }
-                
             }
             .listStyle(InsetGroupedListStyle())
             

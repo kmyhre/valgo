@@ -25,6 +25,9 @@ struct InputView: View {
                     ForEach (election.partiesArray) { party in
                         partyCell(party: party)
                     }
+                    
+                    // Testing area begin
+                    
                     Button {
                         election.partiesArray = Constants.alternativTestData
                     } label: {
@@ -35,67 +38,85 @@ struct InputView: View {
                     } label: {
                         Text("Populate with Norwegian test data")
                     }
-
-                    HStack {
-                        Spacer()
-                        Text("\(election.partiesArray.count) parties")
-                            .foregroundColor(.secondary)
-                        Spacer()
-                    }
-                }
-                .listStyle(InsetGroupedListStyle())
-                
-                NavigationLink("Calculate election", destination: ResultsView().environmentObject(election))
                     
-                    // First row of navbar shenanigans
-                    .navigationBarTitle("Parties")
-                    .navigationBarItems(
-                        leading:
-                            NavigationLink(
-                                destination: SideBar(),
-                                isActive: $showingPref,
-                                label: {
-                                    Image(systemName: "gear")
-                                        .imageScale(.large)
-                                })
-                            .padding(),
-                        trailing:
-                            Button(action: {
-                                self.showingAdd.toggle()
-                            }) {
-                                Image(systemName: "plus")
-                            }.sheet(isPresented: $showingAdd) {
-                                AddParty(showingAdd: $showingAdd).environmentObject(election)
+                    // Testing area end
+                    
+                        HStack {
+                            Spacer()
+                            if election.partiesArray.isEmpty {
+                            Text("Add a party using the + button")
+                                .foregroundColor(.secondary)
+                            } else {
+                                Text("\(election.partiesArray.count) parties")
+                                    .foregroundColor(.secondary)
                             }
 
-                            
-                            
-                    )
+                            Spacer()
+                        }
+
+                    
+                }
+                .listStyle(InsetGroupedListStyle())
+                // First row of navbar shenanigans
+                .navigationBarTitle("Parties")
+                .navigationBarItems(
+                    leading:
+                        Button(action: {
+                            self.showingPref.toggle()
+                        }) {
+                            Image(systemName: "gear")
+                                .imageScale(.large)
+                        }.sheet(isPresented: $showingPref) {
+                            SideBar(showingPref: $showingPref).environmentObject(election)
+                        }
+
+//                        NavigationLink(
+//                            destination: SideBar(),
+//                            isActive: $showingPref,
+//                            label: {
+//                                Image(systemName: "gear")
+//                                    .imageScale(.large)
+//                            })
+                        .padding(),
+                    trailing:
+                        Button(action: {
+                            self.showingAdd.toggle()
+                        }) {
+                            Image(systemName: "plus")
+                            imageScale(.large)
+                        }.sheet(isPresented: $showingAdd) {
+                            AddParty(showingAdd: $showingAdd).environmentObject(election)
+                        }
+                )
+                
+                NavigationLink("Calculate election", destination: ResultsView().environmentObject(election))
+                    .padding()
+                    .disabled(election.partiesArray.isEmpty)
             }
         }
     }
 }
-    
-    
-    struct InputView_Previews: PreviewProvider {
-        static var previews: some View {
-            InputView()
-                .preferredColorScheme(.light)
+
+
+struct InputView_Previews: PreviewProvider {
+    static var previews: some View {
+        InputView()
+            .preferredColorScheme(.light)
+    }
+}
+
+
+struct partyCell: View {
+    var party: Party
+    var body: some View {
+        HStack {
+            
+            Text(party.partyName)
+            Spacer()
+            Text("\(party.votesFormatted) votes")
+                .font(.footnote)
+            
         }
     }
-    
-    
-    struct partyCell: View {
-        var party: Party
-        var body: some View {
-            HStack {
-                
-                Text(party.partyName)
-                Spacer()
-                Text("\(party.votesFormatted) votes")
-                    .font(.footnote)
-                
-            }
-        }
-    }
+}
 

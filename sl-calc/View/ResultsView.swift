@@ -11,8 +11,8 @@ import SwiftUI
 struct ResultsView: View {
     @EnvironmentObject var election: Election
     
+    
     var body: some View {
-        NavigationView {
             List {
                 Section {
                     HStack {
@@ -24,6 +24,9 @@ struct ResultsView: View {
                         HStack {
                             Text(party.partyName)
                             Spacer()
+                            if let icon = party.icon {
+                                Image(systemName: icon)
+                            }
                             if party.seatsWon == 1 {
                                 Text("\(party.seatsWon) seat")
                             } else {
@@ -51,8 +54,6 @@ struct ResultsView: View {
             }.onAppear(perform: election.calculateElection)
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Election Results")
-
-        }
     }
 }
 

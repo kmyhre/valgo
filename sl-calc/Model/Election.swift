@@ -35,12 +35,11 @@ class Election: ObservableObject {
             
         }
         
-        // MARK: - Code this far in method is good.
-        
-        // Todo: Export results to ElectionResults instance
+
         var allocatedSeats = 0
         for party in partiesArray {
             party.seatsWon = 0
+            party.icon = nil
         }
         print("\nIn this election, \(seatsToAllocate) seats will be awarded according to each party's votes.")
         
@@ -50,6 +49,16 @@ class Election: ObservableObject {
             partiesArray[0].seatWon()
             seatsAwarded.append((seat: allocatedSeats, party: partiesArray[0].partyName))
         }
+        
+        // Find last party to be awarded a seat
+        partiesArray[0].icon = "exclamationmark.triangle"
+        
+        // Find next party to be awarded a seat
+        partiesArray = sortPartiesByNextQuotient(parties: partiesArray)
+        partiesArray[0].icon = "chevron.up.circle.fill"
+        
+        
+        partiesArray = sortPartiesBySeats(parties: partiesArray)
         
         print ("\nThe final results are:")
         for party in partiesArray {

@@ -12,6 +12,7 @@ class Party: Identifiable, ObservableObject {
     var quotients: [(divisor: Float, quotient: Float)] = []
     var seatsWon: Int = 0
     var id: Int
+    var icon: String?
     
     // For formatting votes numbers
     let formatter = NumberFormatter()
