@@ -28,7 +28,7 @@ class Election: ObservableObject {
 
             party.currentDivisor = 3
 
-            for _ in 2...seatsToAllocate {
+            for _ in 2...seatsToAllocate+1 {
                 party.quotients.append((divisor: party.currentDivisor, quotient: Float(party.votesCast)/party.currentDivisor))
                 party.currentDivisor += 2
             }
@@ -37,6 +37,7 @@ class Election: ObservableObject {
         
         // Reset data to prepare for subsequent executions
         var allocatedSeats = 0
+        seatsAwarded = []
         for party in partiesArray {
             party.seatsWon = 0
             party.icon = nil

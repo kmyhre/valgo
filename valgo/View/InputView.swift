@@ -55,8 +55,8 @@ struct InputView: View {
                     }
                 }
                 
-             //   .listStyle(InsetGroupedListStyle())
-                .listStyle(GroupedListStyle())
+                .listStyle(InsetGroupedListStyle())
+               // .listStyle(GroupedListStyle())
                 
                 // First row of navbar shenanigans
                 .navigationBarTitle(LocalizedStringKey("Parties"))
@@ -82,6 +82,9 @@ struct InputView: View {
                             AddParty(showingAdd: $showingAdd).environmentObject(election)
                         }
                 )
+                
+                
+
                 NavigationLink("Calculate Election", destination: ResultsView().environmentObject(election))
                     .padding()
                     .disabled(election.partiesArray.isEmpty)
@@ -92,7 +95,10 @@ struct InputView: View {
 
 
 struct InputView_Previews: PreviewProvider {
+    @EnvironmentObject var election: Election
+    
     static var previews: some View {
+
         InputView()
             .preferredColorScheme(.light)
     }
