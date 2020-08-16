@@ -15,7 +15,6 @@ struct InputView: View {
     @State var modifiedMethod: Bool = false
     @EnvironmentObject var election: Election
     
-    
     var body: some View {
         
         NavigationView {
@@ -26,7 +25,7 @@ struct InputView: View {
                         partyCell(party: party)
                     }
                     
-                   // #if targetEnvironment(simulator)
+                    // #if targetEnvironment(simulator)
                     // Testing area begin
                     Button {
                         election.partiesArray = Constants.alternativTestData
@@ -38,10 +37,9 @@ struct InputView: View {
                     } label: {
                         Text("Populate with Norwegian test data")
                     }
-
                     // Testing area end
-                  //  #endif
-
+                    //  #endif
+                    
                     HStack {
                         Spacer()
                         if election.partiesArray.isEmpty {
@@ -56,9 +54,8 @@ struct InputView: View {
                 }
                 
                 .listStyle(InsetGroupedListStyle())
-               // .listStyle(GroupedListStyle())
+                // .listStyle(GroupedListStyle())
                 
-                // First row of navbar shenanigans
                 .navigationBarTitle(LocalizedStringKey("Parties"))
                 .navigationBarItems(
                     leading:
@@ -67,10 +64,10 @@ struct InputView: View {
                         }) {
                             Image(systemName: "gear")
                                 .imageScale(.large)
-                        }.sheet(isPresented: $showingPref) {
+                        }
+                        .sheet(isPresented: $showingPref) {
                             SideBar(showingPref: $showingPref).environmentObject(election)
                         }
-                        
                         .padding(),
                     trailing:
                         Button(action: {
@@ -82,9 +79,6 @@ struct InputView: View {
                             AddParty(showingAdd: $showingAdd).environmentObject(election)
                         }
                 )
-                
-                
-
                 NavigationLink("Calculate Election", destination: ResultsView().environmentObject(election))
                     .padding()
                     .disabled(election.partiesArray.isEmpty)
@@ -98,7 +92,7 @@ struct InputView_Previews: PreviewProvider {
     @EnvironmentObject var election: Election
     
     static var previews: some View {
-
+        
         InputView()
             .preferredColorScheme(.light)
     }

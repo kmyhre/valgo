@@ -16,11 +16,6 @@ struct ResultsView: View {
     var body: some View {
         List {
             Section(header: Text("Seats per party")) {
-                //                    HStack {
-                //                        Spacer()
-                //                        Text("Seats per party")
-                //                        Spacer()
-                //                    }
                 ForEach (election.partiesArray, id: \.id) { party in
                     HStack {
                         Text(party.partyName)
@@ -34,10 +29,8 @@ struct ResultsView: View {
                                 .frame(width: 90)
                         } else {
                             Text("\(String(party.seatsWon)) seats")
-
                                 .multilineTextAlignment(.leading)
                                 .frame(width: 90)
-                            
                         }
                     }
                 }
@@ -51,24 +44,14 @@ struct ResultsView: View {
                         .font(.caption)
                 }
                 .listRowBackground(Color(.secondarySystemBackground))
-                
-                
             }
-            
-            
             Section(header: Text("Allocation of seats")) {
-                //                    HStack {
-                //                        Spacer()
-                //                        Text("Allocation of seats")
-                //                        Spacer()
-                //                    }
                 ForEach (election.seatsAwarded, id: \.seat) { currentSeat in
                     HStack {
                         Text("Seat \(String(currentSeat.seat)):")
                         Spacer()
                         Text(currentSeat.party)
                     }
-                    
                 }
             }
         }.onAppear(perform: election.calculateElection)
