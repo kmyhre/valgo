@@ -13,6 +13,9 @@ struct SideBar: View {
     @EnvironmentObject var election: Election
     @State var modifiedDivisorString: String = "1.4"
     @State var seatsToAllocateString: String = "10"
+    @State var firstDivisorInt: Int = 1
+    @State var firstDivisor: Float = 1.0
+    @State var seatsToAllocate: Int = 10
     @Binding var showingPref: Bool
     
     var body: some View {
@@ -22,7 +25,7 @@ struct SideBar: View {
                 
                 List {
                     Section() {
-                        HStack {
+                        VStack {
                             Text("Seats to allocate")
                                 .foregroundColor(.gray)
                             Spacer()
@@ -35,7 +38,12 @@ struct SideBar: View {
                                         print("election.seatsToAllocate is now \(election.seatsToAllocate)")
                                     }
                                 }
-                            
+                            Picker(selection: $seatsToAllocate, label: Text("Choose seats to allocate")) {
+                                ForEach(1..<1000) {
+                                    Text("\($0)")
+                                }
+                            }
+                            .pickerStyle(WheelPickerStyle())
                         }
                         Toggle("Modified method", isOn: $election.modifiedMethod )
                             .foregroundColor(.gray)
@@ -43,21 +51,28 @@ struct SideBar: View {
                                 election.modifiedMethod = value
                                 print("Modified method is now \(value)")
                             }
-                        
-                        HStack {
-                            Text("First dividend:")
-                                .foregroundColor(.gray)
-                            Spacer()
-                            TextField("", text: $modifiedDivisorString)
-                                .multilineTextAlignment(.trailing)
-                                .keyboardType(.decimalPad)
-                                .disabled(!election.modifiedMethod)
-                                .onChange(of: modifiedDivisorString) { value in
-                                    if let floatValue = Float(value) {
-                                        election.modifiedDivisor = floatValue
-                                        print("election.modifiedDivisor is now \(election.modifiedDivisor) (\(floatValue))")
-                                    }
-                                }
+                        VStack {
+                            HStack {
+                                Text("First dividend:")
+                                    .foregroundColor(.gray)
+                                Spacer()
+                                Text(String(firstDivisor))
+                            }
+                            
+                            HStack {
+                                Slider(value: $firstDivisor, in: 1.0...2.0, step: 0.1)
+                                    .onChange(of: firstDivisor, perform: { value in
+                                        firstDivisor = Float(round(10*value)/10)
+                                        election.modifiedDivisor = firstDivisor
+                                        print("election.modifiedDivisor is now \(election.modifiedDivisor)")
+                                        
+                                    })
+                                    .disabled(!election.modifiedMethod)
+                                
+                                
+                            }
+                            
+                            
                         }
                     }
                     HStack {
@@ -80,7 +95,10 @@ struct SideBar: View {
 }
 
 //struct SideBar_Previews: PreviewProvider {
+////    @State var showingPref = true
+//
 //    static var previews: some View {
+//
 //        Group {
 //            SideBar()
 //        }

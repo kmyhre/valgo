@@ -26,7 +26,7 @@ struct InputView: View {
                         partyCell(party: party)
                     }
                     
-                    #if targetEnvironment(simulator)
+                   // #if targetEnvironment(simulator)
                     // Testing area begin
                     Button {
                         election.partiesArray = Constants.alternativTestData
@@ -40,7 +40,7 @@ struct InputView: View {
                     }
 
                     // Testing area end
-                    #endif
+                  //  #endif
 
                     HStack {
                         Spacer()
