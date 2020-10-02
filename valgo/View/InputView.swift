@@ -89,6 +89,7 @@ struct InputView: View {
                         }) {
                             ZStack {
                                 Circle()
+                                    .foregroundColor(.green)
                                 Image(systemName: "plus")
                                     .imageScale(.large)
                                     .foregroundColor(.white)
