@@ -59,28 +59,28 @@ struct InputView: View {
                 .navigationBarTitle(LocalizedStringKey("Parties"))
                 
                 
-                .navigationBarItems(
-                    leading:
-                        Button(action: {
-                            self.showingPref.toggle()
-                        }) {
-                            Image(systemName: "gear")
-                                .imageScale(.large)
-                        }
-                        .sheet(isPresented: $showingPref) {
-                            SideBar(showingPref: $showingPref).environmentObject(election)
-                        }
-                        .padding(),
-                    trailing:
-                        Button(action: {
-                            self.showingAdd.toggle()
-                        }) {
-                            Image(systemName: "plus")
-                                .imageScale(.large)
-                        }.sheet(isPresented: $showingAdd) {
-                            AddParty(showingAdd: $showingAdd).environmentObject(election)
-                        }
-                )
+//                .navigationBarItems(
+//                    leading:
+//                        Button(action: {
+//                            self.showingPref.toggle()
+//                        }) {
+//                            Image(systemName: "gear")
+//                                .imageScale(.large)
+//                        }
+//                        .sheet(isPresented: $showingPref) {
+//                            SideBar(showingPref: $showingPref).environmentObject(election)
+//                        }
+//                        .padding(),
+//                    trailing:
+//                        Button(action: {
+//                            self.showingAdd.toggle()
+//                        }) {
+//                            Image(systemName: "plus")
+//                                .imageScale(.large)
+//                        }.sheet(isPresented: $showingAdd) {
+//                            AddParty(showingAdd: $showingAdd).environmentObject(election)
+//                        }
+//                )
                 
                     HStack {
                         NavigationLink("Settings", destination: SideBar(showingPref: $showingPref))
