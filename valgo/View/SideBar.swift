@@ -25,25 +25,30 @@ struct SideBar: View {
                 
                 List {
                     Section() {
-                        VStack {
+                        HStack {
                             Text("Seats to allocate")
                                 .foregroundColor(.gray)
                             Spacer()
                             TextField("", text: $seatsToAllocateString)
                                 .keyboardType(.numberPad)
                                 .multilineTextAlignment(.trailing)
+                                .fixedSize()
+                                .padding(EdgeInsets(top: 1, leading: 10, bottom: 1, trailing: 10))
+                                .border(Color.black)
                                 .onChange(of: seatsToAllocateString) { value in
                                     if let seatsInteger = Int(value) {
                                         election.seatsToAllocate = seatsInteger
                                         print("election.seatsToAllocate is now \(election.seatsToAllocate)")
                                     }
                                 }
-                            Picker(selection: $seatsToAllocate, label: Text("Choose seats to allocate")) {
-                                ForEach(1..<1000) {
-                                    Text("\($0)")
-                                }
-                            }
-                            .pickerStyle(WheelPickerStyle())
+                            
+//                            Picker(selection: $seatsToAllocate, label: Text("Number of seats to allocate")) {
+//                                ForEach(1..<1000) {
+//                                    Text("\($0)")
+//                                }
+//                            }
+//                            .pickerStyle(MenuPickerStyle())
+                            
                         }
                         Toggle("Modified method", isOn: $election.modifiedMethod )
                             .foregroundColor(.gray)
