@@ -81,10 +81,30 @@ struct InputView: View {
                             AddParty(showingAdd: $showingAdd).environmentObject(election)
                         }
                 )
-                NavigationLink("Settings", destination: SideBar(showingPref: $showingPref))
-                NavigationLink("Calculate Election", destination: ResultsView().environmentObject(election))
-                    .padding()
-                    .disabled(election.partiesArray.isEmpty)
+                
+                    HStack {
+                        NavigationLink("Settings", destination: SideBar(showingPref: $showingPref))
+                        Button(action: {
+                            self.showingAdd.toggle()
+                        }) {
+                            ZStack {
+                                Circle()
+                                Image(systemName: "plus")
+                                    .imageScale(.large)
+                                    .foregroundColor(.white)
+                                    .font(Font.system(size:50))
+                                    .padding()
+                            }
+                        }
+                        .fixedSize()
+                        .sheet(isPresented: $showingAdd) {
+                            AddParty(showingAdd: $showingAdd).environmentObject(election)
+                        }
+                        NavigationLink("Calculate Election", destination: ResultsView().environmentObject(election))
+                            .padding()
+                            .disabled(election.partiesArray.isEmpty)
+
+                    }
             }
         }
     }
