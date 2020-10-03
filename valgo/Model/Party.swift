@@ -11,7 +11,7 @@ class Party: Identifiable, ObservableObject {
     var nextQuotient: Int = 0
     var quotients: [(divisor: Float, quotient: Float)] = []
     var seatsWon: Int = 0
-    var id: Int
+    var id: UUID = UUID()
     var icon: String?
     
     // For formatting votes numbers
@@ -21,8 +21,7 @@ class Party: Identifiable, ObservableObject {
     }
     
     
-    init(name: String, votes: Int, identity: Int) {
-        id = identity
+    init(name: String, votes: Int) {
         partyName = name
         votesCast = votes
         remainingVotes = Float(votesCast)

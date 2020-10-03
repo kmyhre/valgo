@@ -10,7 +10,7 @@ class Election: ObservableObject {
         @Published var currentID: Int = 0
         @Published var seatsAwarded: [(seat: Int, party: String)] = []
         
-    
+    // MARK: calculateElection
     func calculateElection() {
         
         for party in partiesArray {
@@ -32,7 +32,6 @@ class Election: ObservableObject {
                 party.quotients.append((divisor: party.currentDivisor, quotient: Float(party.votesCast)/party.currentDivisor))
                 party.currentDivisor += 2
             }
-            
         }
         
         // Reset data to prepare for subsequent executions
@@ -68,14 +67,17 @@ class Election: ObservableObject {
         }
     }
     
+    
+    
+    // MARK: addParty
+    
     func addParty(name: String, votes: Int) {
-        partiesArray.append(Party(name: name, votes: votes, identity: currentID))
+        partiesArray.append(Party(name: name, votes: votes))
 //        if let _ = quotients {
 //            quotients!.append(calculateQuotients(identity: currentID, originalVotes: Float(votes)))
 //        } else {
 //            quotients = [calculateQuotients(identity: currentID, originalVotes: Float(votes))]
 //        }
-        currentID += 1
         
         print("Party added: \(name)")
     }
