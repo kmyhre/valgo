@@ -55,15 +55,21 @@ struct SideBar: View {
                             .onChange(of: election.modifiedMethod) { value in
                                 election.modifiedMethod = value
                                 print("Modified method is now \(value)")
-                            }
+                                }
+                            
+                        
+                        
+                        if election.modifiedMethod {
+                            
                         VStack {
                             HStack {
-                                Text("First dividend:")
+                                Text("First divisor:")
                                     .foregroundColor(.gray)
                                 Spacer()
                                 Text(String(firstDivisor))
                             }
                             
+                
                             HStack {
                                 Slider(value: $firstDivisor, in: 1.0...2.0, step: 0.1)
                                     .onChange(of: firstDivisor, perform: { value in
@@ -77,8 +83,9 @@ struct SideBar: View {
                                 
                             }
                             
-                            
                         }
+                        }
+                        
                     }
                     HStack {
                         Spacer()
