@@ -85,7 +85,7 @@ struct InputView: View {
                     GeometryReader { geometry in
                         HStack(alignment: .center, spacing: 0){
                             NavigationLink("Settings", destination: SideBar(showingPref: $showingPref))
-                                .frame(width: geometry.size.width / 2, height: 80)
+                                .frame(width: geometry.size.width / 2, height: 69)
                                 .background(Color.blue)
                                 .foregroundColor(Color.white)
                                 .sheet(isPresented: $showingAdd) {
@@ -95,7 +95,7 @@ struct InputView: View {
                                             Calculate
                                             Election
                                             """, destination: ResultsView().environmentObject(election))
-                                .frame(width: geometry.size.width / 2, height: 80)
+                                .frame(width: geometry.size.width / 2, height: 69)
 
                                 .foregroundColor(Color.white)
                                 .background(election.partiesArray.isEmpty ? Color.gray : Color.purple)
@@ -106,7 +106,8 @@ struct InputView: View {
                     Button(action: { self.showingAdd.toggle() } ) {
                         ZStack {
                             Circle()
-                                .foregroundColor(.green)
+                                .stroke(Color.white, lineWidth: 2)
+                            .background(Circle().foregroundColor(Color.green))
 
                             Image(systemName: "plus")
                                 .imageScale(.large)
