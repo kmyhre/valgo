@@ -106,19 +106,13 @@ struct SideBar: View {
     
 }
 
-//struct SideBar_Previews: PreviewProvider {
-////    @State var showingPref = true
-//
-//    static var previews: some View {
-//
-//        Group {
-//            SideBar()
-//        }
-//    }
-//}
-
 struct SideBar_Previews: PreviewProvider {
+    
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+
+        Group {
+            SideBar(
+                showingPref: .constant(true))
+        }
     }
 }

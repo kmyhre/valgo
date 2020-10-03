@@ -113,12 +113,8 @@ struct InputView: View {
 
 
 struct InputView_Previews: PreviewProvider {
-    @EnvironmentObject var election: Election
-    
     static var previews: some View {
-        
         InputView()
-            .preferredColorScheme(.light)
     }
 }
 
