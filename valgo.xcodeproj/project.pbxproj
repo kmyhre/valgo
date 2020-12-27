@@ -81,7 +81,6 @@
 				93C871A024AB95AD007D9C2A /* Info.plist */,
 				93C871BE24AE4FBF007D9C2A /* Model */,
 				93C871BB24AE4F89007D9C2A /* View */,
-				93C871BC24AE4F9B007D9C2A /* Controller */,
 			);
 			path = valgo;
 			sourceTree = "<group>";
@@ -95,13 +94,6 @@
 				93DD11F324B4E59F005DDAFB /* AddParty.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		93C871BC24AE4F9B007D9C2A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		93C871BE24AE4FBF007D9C2A /* Model */ = {

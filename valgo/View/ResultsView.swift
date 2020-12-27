@@ -66,13 +66,3 @@ struct ResultsView_Previews: PreviewProvider {
         ResultsView()
     }
 }
-
-extension HorizontalAlignment {
-    struct MidAccountAndName: AlignmentID {
-        static func defaultValue(in d: ViewDimensions) -> CGFloat {
-            d[.trailing]
-        }
-    }
-
-    static let midAccountAndName = HorizontalAlignment(MidAccountAndName.self)
-}
