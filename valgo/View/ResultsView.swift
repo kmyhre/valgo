@@ -18,19 +18,21 @@ struct ResultsView: View {
             Section(header: Text("Seats per party")) {
                 ForEach (election.partiesArray, id: \.id) { party in
                     HStack {
-                        Text(party.partyName)
-                        Spacer()
                         if let icon = party.icon {
                             Image(systemName: icon)
+                        } else {
+                            Rectangle()
+                                .foregroundColor(.clear)
+                                .frame(width: 20, height: 20)
                         }
+
+                        Text(party.partyName)
+                        Spacer()
                         if party.seatsWon == 1 {
                             Text("\(String(party.seatsWon)) seat")
-                                .multilineTextAlignment(.leading)
-                                .frame(width: 90)
                         } else {
                             Text("\(String(party.seatsWon)) seats")
-                                .multilineTextAlignment(.leading)
-                                .frame(width: 90)
+
                         }
                     }
                 }
