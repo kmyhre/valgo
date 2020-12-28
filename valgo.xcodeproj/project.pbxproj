@@ -19,6 +19,7 @@
 		93DD11F224B4DC67005DDAFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F124B4DC67005DDAFB /* Constants.swift */; };
 		93DD11F424B4E59F005DDAFB /* AddParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F324B4E59F005DDAFB /* AddParty.swift */; };
 		93E2D74024C46FD60085E2B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93E2D74224C46FD60085E2B3 /* Localizable.strings */; };
+		93E8BD7F259A4677000AF20F /* PartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E8BD7E259A4677000AF20F /* PartyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		93E2D74124C46FD60085E2B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		93E2D74624C4778B0085E2B3 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		93E2D74724C4778B0085E2B3 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		93E8BD7E259A4677000AF20F /* PartyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				93557EE024C48162006682A0 /* InputView.swift */,
+				93E8BD7E259A4677000AF20F /* PartyCell.swift */,
 				93BD692B24BE24D800219706 /* ResultsView.swift */,
 				93192C5A24B89ED900EC8D10 /* SideBar.swift */,
 				93DD11F324B4E59F005DDAFB /* AddParty.swift */,
@@ -183,6 +186,7 @@
 				93C871A724ABCB16007D9C2A /* Election.swift in Sources */,
 				93C8719024AB95AC007D9C2A /* AppDelegate.swift in Sources */,
 				93C871A924ABCB30007D9C2A /* Party.swift in Sources */,
+				93E8BD7F259A4677000AF20F /* PartyCell.swift in Sources */,
 				93C8719224AB95AC007D9C2A /* SceneDelegate.swift in Sources */,
 				93BD692C24BE24D800219706 /* ResultsView.swift in Sources */,
 				93DD11F224B4DC67005DDAFB /* Constants.swift in Sources */,

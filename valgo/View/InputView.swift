@@ -18,7 +18,6 @@ struct InputView: View {
     var body: some View {
         
         NavigationView {
-            
             VStack {
                 List {
                     ForEach (election.partiesArray) { party in
@@ -56,75 +55,44 @@ struct InputView: View {
                 .listStyle(InsetGroupedListStyle())
                 // .listStyle(GroupedListStyle())
                 
-                .navigationBarTitle(LocalizedStringKey("Parties"))
-                
-                
-                //                .navigationBarItems(
-                //                    leading:
-                //                        Button(action: {
-                //                            self.showingPref.toggle()
-                //                        }) {
-                //                            Image(systemName: "gear")
-                //                                .imageScale(.large)
-                //                        }
-                //                        .sheet(isPresented: $showingPref) {
-                //                            SideBar(showingPref: $showingPref).environmentObject(election)
-                //                        }
-                //                        .padding(),
-                //                    trailing:
-                //                        Button(action: {
-                //                            self.showingAdd.toggle()
-                //                        }) {
-                //                            Image(systemName: "plus")
-                //                                .imageScale(.large)
-                //                        }.sheet(isPresented: $showingAdd) {
-                //                            AddParty(showingAdd: $showingAdd).environmentObject(election)
-                //                        }
-                //                )
-                ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
-                    GeometryReader { geometry in
-                        HStack(alignment: .center, spacing: 0){
-                            NavigationLink("Settings", destination: SideBar(showingPref: $showingPref))
-                                .frame(width: geometry.size.width / 2, height: 69)
-                                .background(Color.blue)
-                                .foregroundColor(Color.white)
-                                .sheet(isPresented: $showingAdd) {
-                                    AddParty(showingAdd: $showingAdd).environmentObject(election)
-                                }
-                            NavigationLink("""
-                                            Calculate
-                                            Election
-                                            """, destination: ResultsView().environmentObject(election))
-                                .frame(width: geometry.size.width / 2, height: 69)
-
-                                .foregroundColor(Color.white)
-                                .background(election.partiesArray.isEmpty ? Color.gray : Color.purple)
-                                .disabled(election.partiesArray.isEmpty)
-                        }
-                    }
                     
-                    Button(action: { self.showingAdd.toggle() } ) {
+                .navigationBarTitle(LocalizedStringKey("Parties"))
+                .navigationBarItems(
+                    leading: Button(action: {self.showingPref.toggle() } ) {
                         ZStack {
                             Circle()
-                                .stroke(Color.white, lineWidth: 2)
-                            .background(Circle().foregroundColor(Color.green))
-
-                            Image(systemName: "plus")
-                                .imageScale(.large)
-                                .foregroundColor(.white)
-                                .font(Font.system(size:50))
-                                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                            Image(systemName: "gear").font(navViewFont)
+                                .foregroundColor(Color.white)
+                                .padding(EdgeInsets.init(top: 4, leading: 4, bottom: 4, trailing: 4))
                         }
-
-
                     }
-                    .fixedSize()
                     
-                }
-                .fixedSize(horizontal: false, vertical: true)
+                        ,
+                    trailing: Button(action: { self.showingAdd.toggle() } ) {
+                        ZStack {
+                            Circle()
+                            Image(systemName: "plus").font(navViewFont)
+                                .foregroundColor(Color.white)
+                                .padding(EdgeInsets.init(top: 4, leading: 4, bottom: 4, trailing: 4))
+
+
+                        }
+                    }
+                )
+                
+                
+                            NavigationLink("Calculate Election", destination: ResultsView().environmentObject(election))
+                                .disabled(election.partiesArray.isEmpty)
+                                .padding()
+                
+                
             }
         }
     }
+    let navViewFont = Font
+        .system(size: 24)
+        .weight(.light)
+
 }
 
 
@@ -133,17 +101,3 @@ struct InputView: View {
 //        InputView()
 //    }
 //}
-
-
-struct partyCell: View {
-    var party: Party
-    var body: some View {
-        HStack {
-            Text(party.partyName)
-            Spacer()
-            Text("\(party.votesFormatted) votes")
-                .font(.footnote)
-        }
-    }
-}
-
