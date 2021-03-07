@@ -29,7 +29,7 @@ class Party: Identifiable, ObservableObject {
         remainingVotes = Float(votesCast)
         currentDivisor = 0
         formatter.numberStyle = NumberFormatter.Style.decimal
-        partyColor = randomColor()
+        partyColor = randomColor(hue: .random, luminosity: .bright)
     }
     
     func seatWon() {
