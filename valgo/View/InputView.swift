@@ -42,7 +42,7 @@ struct InputView: View {
                     HStack {
                         Spacer()
                         if election.partiesArray.isEmpty {
-                            Text("Add a party using the + button")
+                            Text("Add parties using the + button")
                                 .foregroundColor(.secondary)
                         } else {
                             Text("\(election.partiesArray.count) parties")
@@ -59,20 +59,21 @@ struct InputView: View {
                 .navigationBarTitle(LocalizedStringKey("Parties"))
                 .navigationBarItems(
                     leading: Button(action: {self.showingPref.toggle() } ) {
-                        ZStack {
-                            Circle()
-                            Image(systemName: "gear").font(navViewFont)
-                                .foregroundColor(Color.white)
-                                .padding(EdgeInsets.init(top: 4, leading: 4, bottom: 4, trailing: 4))
-                        }
+                        Text("Settings")
+//                        ZStack {
+//                            Circle()
+//                            Image(systemName: "gear").font(navViewFont)
+//                                .foregroundColor(Color.white)
+//                                .padding(EdgeInsets.init(top: 4, leading: 4, bottom: 4, trailing: 4))
+//                        }
                     }
                     
                         ,
                     trailing: Button(action: { self.showingAdd.toggle() } ) {
                         ZStack {
-                            Circle()
+//                            Circle()
                             Image(systemName: "plus").font(navViewFont)
-                                .foregroundColor(Color.white)
+//                                .foregroundColor(Color.white)
                                 .padding(EdgeInsets.init(top: 4, leading: 4, bottom: 4, trailing: 4))
 
 
