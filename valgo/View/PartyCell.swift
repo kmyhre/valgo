@@ -15,7 +15,7 @@ struct partyCell: View {
         HStack {
             Circle()
                 .foregroundColor(Color(party.partyColor))
-                .frame(width: 15, height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .fixedSize()
 
             
             Text(party.partyName)

@@ -54,9 +54,7 @@ struct ResultsView: View {
                         Spacer()
                         Text(currentSeat.party.partyName)
                         Circle()
-                            .foregroundColor(Color(currentSeat.party.partyColor))
-                            .frame(width: 15, height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-
+                            .fixedSize()
                     }
                 }
             }
