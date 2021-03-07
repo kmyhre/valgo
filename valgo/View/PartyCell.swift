@@ -13,6 +13,11 @@ struct partyCell: View {
     var party: Party
     var body: some View {
         HStack {
+            Circle()
+                .foregroundColor(Color(party.partyColor))
+                .frame(width: 15, height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+
+            
             Text(party.partyName)
             Spacer()
             Text("\(party.votesFormatted) votes")

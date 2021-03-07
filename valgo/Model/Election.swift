@@ -8,7 +8,7 @@ class Election: ObservableObject {
         @Published var seatsToAllocate: Int = 10
         @Published var partiesArray: [Party] = []
         @Published var currentID: Int = 0
-        @Published var seatsAwarded: [(seat: Int, party: String)] = []
+        @Published var seatsAwarded: [(seat: Int, party: Party)] = []
         
     // MARK: calculateElection
     func calculateElection() {
@@ -48,7 +48,7 @@ class Election: ObservableObject {
             allocatedSeats = allocatedSeats + 1
             partiesArray = sortPartiesByNextQuotient(parties: partiesArray)
             partiesArray[0].seatWon()
-            seatsAwarded.append((seat: allocatedSeats, party: partiesArray[0].partyName))
+            seatsAwarded.append((seat: allocatedSeats, party: partiesArray[0]))
         }
         
         // Find last party to be awarded a seat

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		93DD11F424B4E59F005DDAFB /* AddParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DD11F324B4E59F005DDAFB /* AddParty.swift */; };
 		93E2D74024C46FD60085E2B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93E2D74224C46FD60085E2B3 /* Localizable.strings */; };
 		93E8BD7F259A4677000AF20F /* PartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E8BD7E259A4677000AF20F /* PartyCell.swift */; };
+		DB85DF0925F53CC200A21632 /* RandomColor in Frameworks */ = {isa = PBXBuildFile; productRef = DB85DF0825F53CC200A21632 /* RandomColor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB85DF0925F53CC200A21632 /* RandomColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +126,9 @@
 			dependencies = (
 			);
 			name = valgo;
+			packageProductDependencies = (
+				DB85DF0825F53CC200A21632 /* RandomColor */,
+			);
 			productName = SLCalc;
 			productReference = 93C8718C24AB95AC007D9C2A /* valgo.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +158,9 @@
 				nb,
 			);
 			mainGroup = 93C8718324AB95AC007D9C2A;
+			packageReferences = (
+				DB85DF0725F53CC200A21632 /* XCRemoteSwiftPackageReference "RandomColorSwift" */,
+			);
 			productRefGroup = 93C8718D24AB95AC007D9C2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -407,6 +415,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB85DF0725F53CC200A21632 /* XCRemoteSwiftPackageReference "RandomColorSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/RandomColorSwift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB85DF0825F53CC200A21632 /* RandomColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB85DF0725F53CC200A21632 /* XCRemoteSwiftPackageReference "RandomColorSwift" */;
+			productName = RandomColor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93C8718424AB95AC007D9C2A /* Project object */;
 }

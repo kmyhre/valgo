@@ -1,10 +1,12 @@
 import Foundation
 import SwiftUI
+import RandomColor
 
 class Party: Identifiable, ObservableObject {
 
     
     let partyName: String
+    let partyColor: UIColor
     let votesCast: Int
     var remainingVotes: Float
     var currentDivisor: Float
@@ -27,6 +29,7 @@ class Party: Identifiable, ObservableObject {
         remainingVotes = Float(votesCast)
         currentDivisor = 0
         formatter.numberStyle = NumberFormatter.Style.decimal
+        partyColor = randomColor()
     }
     
     func seatWon() {
