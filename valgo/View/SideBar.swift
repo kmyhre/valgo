@@ -28,7 +28,6 @@ struct SideBar: View {
                             Text("Seats to allocate")
                                 .foregroundColor(.gray)
                             Spacer()
-                            if #available(iOS 15.0, *) {
                                 TextField("", text: $seatsToAllocateString, prompt: Text("10"))
                                     .keyboardType(.numberPad)
                                     .multilineTextAlignment(.trailing)
@@ -41,9 +40,6 @@ struct SideBar: View {
                                             print("election.seatsToAllocate is now \(election.seatsToAllocate)")
                                         }
                                     }
-                            } else {
-                                // Fallback on earlier versions
-                            }
                         }
                         Toggle("Modified method", isOn: $election.modifiedMethod )
                             .foregroundColor(.gray)

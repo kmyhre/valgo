@@ -50,7 +50,6 @@ struct InputView: View {
                 
                 .navigationBarTitle(LocalizedStringKey("Parties"))
                 
-                if #available(iOS 15.0, *) {
                     VStack {
                         HStack {
                             Spacer()
@@ -90,9 +89,7 @@ struct InputView: View {
                         
                     }
                     
-                } else {
-                    // Fallback on earlier versions
-                }
+
             }
             
         }
