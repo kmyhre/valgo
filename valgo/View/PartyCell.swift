@@ -2,8 +2,7 @@
 //  PartyCell.swift
 //  valgo
 //
-//  Created by Kristian Myhre on 28/12/2020.
-//  Copyright © 2020 Kristian Myhre. All rights reserved.
+//  Created by Kristian Myhre
 //
 
 import Foundation

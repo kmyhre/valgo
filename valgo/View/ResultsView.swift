@@ -2,8 +2,7 @@
 //  ResultsView.swift
 //  sl-calc
 //
-//  Created by Kristian Myhre on 14/07/2020.
-//  Copyright © 2020 Kristian Myhre. All rights reserved.
+//  Created by Kristian Myhre
 //
 
 import SwiftUI
