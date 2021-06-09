@@ -24,25 +24,21 @@ struct InputView: View {
                         partyCell(party: party)
                     }
                     
-                    // #if targetEnvironment(simulator)
+#if targetEnvironment(simulator)
                     // Testing area begin
-                    Button {
+                    Button("Populate with test data") {
                         election.partiesArray = Constants.alternativTestData
-                    } label: {
-                        Text("Populate with test data")
                     }
-                    Button {
+                    Button("Populate with Norwegian test data") {
                         election.partiesArray = Constants.testData
-                    } label: {
-                        Text("Populate with Norwegian test data")
                     }
                     // Testing area end
-                    //  #endif
+#endif
                     
                     HStack {
                         Spacer()
                         if election.partiesArray.isEmpty {
-                            Text("Add parties using the + button")
+                            Text("Add parties in order to calculate election")
                                 .foregroundColor(.secondary)
                         } else {
                             Text("\(election.partiesArray.count) parties")
@@ -52,53 +48,67 @@ struct InputView: View {
                     }
                 }
                 
-                .listStyle(InsetGroupedListStyle())
-                // .listStyle(GroupedListStyle())
-                
-                    
                 .navigationBarTitle(LocalizedStringKey("Parties"))
-                .navigationBarItems(
-                    leading: Button(action: {self.showingPref.toggle() } ) {
-                        Text("Settings")
-//                        ZStack {
-//                            Circle()
-//                            Image(systemName: "gear").font(navViewFont)
-//                                .foregroundColor(Color.white)
-//                                .padding(EdgeInsets.init(top: 4, leading: 4, bottom: 4, trailing: 4))
-//                        }
+                
+                if #available(iOS 15.0, *) {
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Button("Preferences") {
+                                showingPref.toggle()
+                            }
+                            .controlSize(.large)
+
+                            
+                            Spacer()
+                            if election.partiesArray.isEmpty {
+                                Button("Add Party") {
+                                    showingAdd.toggle()
+                                }
+                                    .buttonStyle(.bordered)
+                                    .controlSize(.large)
+                                    .controlProminence(.increased)
+
+                            } else {
+                                Button("Add Party") {
+                                    showingAdd.toggle()
+                                }
+                                .buttonStyle(.bordered)
+                                .controlSize(.large)
+                                .controlProminence(.standard)
+
+
+                            }
+                            Spacer()
+                        }
+                        NavigationLink("Calculate Election", destination: ResultsView().environmentObject(election))
+                            .buttonStyle(.bordered)
+                            .controlSize(.large)
+                            .controlProminence(.increased)
+                            .disabled(election.partiesArray.isEmpty)
+
+                        
                     }
                     
-                        ,
-                    trailing: Button(action: { self.showingAdd.toggle() } ) {
-                        ZStack {
-//                            Circle()
-                            Image(systemName: "plus").font(navViewFont)
-//                                .foregroundColor(Color.white)
-                                .padding(EdgeInsets.init(top: 4, leading: 4, bottom: 4, trailing: 4))
-
-
-                        }
-                    }
-                )
-                
-                
-                            NavigationLink("Calculate Election", destination: ResultsView().environmentObject(election))
-                                .disabled(election.partiesArray.isEmpty)
-                                .padding()
-                
-                
+                } else {
+                    // Fallback on earlier versions
+                }
             }
+            
+        }
+        .sheet(isPresented: $showingAdd) {
+            AddParty(showingAdd: $showingAdd)
+        }
+        .sheet(isPresented: $showingPref) {
+            SideBar(showingPref: $showingPref)
         }
     }
-    let navViewFont = Font
-        .system(size: 24)
-        .weight(.light)
-
 }
 
 
-//struct InputView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        InputView()
-//    }
-//}
+struct InputView_Previews: PreviewProvider {
+    @EnvironmentObject var election: Election
+    static var previews: some View {
+        InputView()
+    }
+}
