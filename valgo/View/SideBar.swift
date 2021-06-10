@@ -27,13 +27,9 @@ struct SideBar: View {
                         HStack {
                             Text("Seats to allocate")
                                 .foregroundColor(.gray)
-                            Spacer()
                                 TextField("", text: $seatsToAllocateString, prompt: Text("10"))
                                     .keyboardType(.numberPad)
                                     .multilineTextAlignment(.trailing)
-                                    .fixedSize()
-                                    .padding(EdgeInsets(top: 1, leading: 10, bottom: 1, trailing: 10))
-                                //.border(Color.black)
                                     .onChange(of: seatsToAllocateString) { value in
                                         if let seatsInteger = Int(value) {
                                             election.seatsToAllocate = seatsInteger
