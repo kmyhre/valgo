@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct SideBar: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var election: Election
     @State var modifiedDivisorString: String = "1.4"
     @State var seatsToAllocateString: String = ""
     @State var firstDivisorInt: Int = 1
     @State var firstDivisor: Float = 1.0
     @State var seatsToAllocate: Int = 10
-    @Binding var showingPref: Bool
     
     var body: some View {
         
@@ -69,7 +68,7 @@ struct SideBar: View {
                     HStack {
                         Spacer()
                         Button(action: {
-                            showingPref.toggle()
+                            presentationMode.wrappedValue.dismiss()
                         }, label: {
                             Text("Dismiss")
                         })
@@ -89,8 +88,7 @@ struct SideBar_Previews: PreviewProvider {
     static var previews: some View {
         
         Group {
-            SideBar(
-                showingPref: .constant(true))
+            SideBar()
         }
     }
 }

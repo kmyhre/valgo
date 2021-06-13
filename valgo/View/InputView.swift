@@ -94,10 +94,10 @@ struct InputView: View {
             
         }
         .sheet(isPresented: $showingAdd) {
-            AddParty(showingAdd: $showingAdd)
+            AddParty()
         }
         .sheet(isPresented: $showingPref) {
-            SideBar(showingPref: $showingPref)
+            SideBar()
         }
     }
 }

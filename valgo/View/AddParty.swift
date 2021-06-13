@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct AddParty: View {
-    
+    @Environment(\.presentationMode) var presentationMode
     @State private var name: String = ""
     @State private var votes: String = ""
-    @Binding var showingAdd: Bool
     @EnvironmentObject var election: Election
 
     
@@ -27,7 +26,7 @@ struct AddParty: View {
                             
                             election.addParty(name: name, votes: votesInt)
                             
-                            showingAdd.toggle()
+                            presentationMode.wrappedValue.dismiss()
                             
                         }
                     }, label: {
@@ -42,8 +41,8 @@ struct AddParty: View {
 }
 
 
-//struct AddParty_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddParty(showingAdd: )
-//    }
-//}
+struct AddParty_Previews: PreviewProvider {
+    static var previews: some View {
+        AddParty()
+    }
+}
