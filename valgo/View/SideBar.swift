@@ -10,7 +10,7 @@ import SwiftUI
 struct SideBar: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var election: Election
-    @State var modifiedDivisorString: String = "1.4"
+    @State var modifiedDivisorString: String = ""
     @State var seatsToAllocateString: String = ""
     @State var firstDivisorInt: Int = 1
     @State var firstDivisor: Float = 1.0
@@ -29,6 +29,8 @@ struct SideBar: View {
                                 TextField("", text: $seatsToAllocateString, prompt: Text("10"))
                                     .keyboardType(.numberPad)
                                     .multilineTextAlignment(.trailing)
+                                    .onAppear(perform: {
+                                        seatsToAllocateString = String(election.seatsToAllocate)})
                                     .onChange(of: seatsToAllocateString) { value in
                                         if let seatsInteger = Int(value) {
                                             election.seatsToAllocate = seatsInteger
@@ -49,10 +51,11 @@ struct SideBar: View {
                                     Text("First divisor:")
                                         .foregroundColor(.gray)
                                     Spacer()
-                                    Text(String(firstDivisor))
+                                    Text(String(election.modifiedDivisor))
                                 }
                                 HStack {
                                     Slider(value: $firstDivisor, in: 1.0...2.0, step: 0.1)
+                                        .onAppear(perform: {firstDivisor = election.modifiedDivisor})
                                         .onChange(of: firstDivisor, perform: { value in
                                             firstDivisor = Float(round(10*value)/10)
                                             election.modifiedDivisor = firstDivisor
@@ -83,12 +86,9 @@ struct SideBar: View {
     
 }
 
-struct SideBar_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        Group {
-            SideBar()
-        }
-    }
-}
+//struct SideBar_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//            SideBar()
+//    }
+//}
