@@ -12,15 +12,17 @@ struct AddParty: View {
     @State private var name: String = ""
     @State private var votes: String = ""
     @EnvironmentObject var election: Election
-
+    
     
     var body: some View {
         NavigationView {
             VStack {
                 Form {
                     TextField("Party", text: $name)
-                    TextField("Votes", text: $votes)
-                        .keyboardType(.numberPad)
+                        TextField("Votes", text: $votes)
+                            .keyboardType(.numberPad)
+
+                
                     Button(action: {
                         if let votesInt = Int(votes) {
                             
@@ -32,12 +34,18 @@ struct AddParty: View {
                     }, label: {
                         Text("Add Party")
                     })
+                        .buttonStyle(.bordered)
+                        .controlSize(.large)
+                        .controlProminence(.increased)
+                        .disabled(votes == "" || name == "")
+                        
                 }
+                
             }
             .navigationBarTitle("Add Party")
         }
     }
-        
+    
 }
 
 

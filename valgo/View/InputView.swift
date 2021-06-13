@@ -50,62 +50,58 @@ struct InputView: View {
                 
                 .navigationBarTitle(LocalizedStringKey("Parties"))
                 
-                    VStack {
-                        HStack {
-                            Spacer()
-                            Button("Preferences") {
-                                showingPref.toggle()
-                            }
-                            .controlSize(.large)
-
-                            
-                            Spacer()
-                            if election.partiesArray.isEmpty {
-                                Button("Add Party") {
-                                    showingAdd.toggle()
-                                }
-                                    .buttonStyle(.bordered)
-                                    .controlSize(.large)
-                                    .controlProminence(.increased)
-
-                            } else {
-                                Button("Add Party") {
-                                    showingAdd.toggle()
-                                }
-                                .buttonStyle(.bordered)
-                                .controlSize(.large)
-                                .controlProminence(.standard)
-
-
-                            }
-                            Spacer()
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button("Preferences") {
+                            showingPref.toggle()
                         }
-                        NavigationLink("Calculate Election", destination: ResultsView().environmentObject(election))
+                        .controlSize(.large)
+                        
+                        
+                        Spacer()
+                        if election.partiesArray.isEmpty {
+                            Button("Add Party") {
+                                showingAdd.toggle()
+                            }
                             .buttonStyle(.bordered)
                             .controlSize(.large)
                             .controlProminence(.increased)
-                            .disabled(election.partiesArray.isEmpty)
-
-                        
+                            
+                        } else {
+                            Button("Add Party") {
+                                showingAdd.toggle()
+                            }
+                            .buttonStyle(.bordered)
+                            .controlSize(.large)
+                            .controlProminence(.standard)
+                            
+                            
+                        }
+                        Spacer()
                     }
+                    NavigationLink("Calculate Election", destination: ResultsView().environmentObject(election))
+                        .buttonStyle(.bordered)
+                        .controlSize(.large)
+                        .controlProminence(.increased)
+                        .disabled(election.partiesArray.isEmpty)
                     
-
+                    
+                }
+                
+                
             }
             
         }
-        .sheet(isPresented: $showingAdd) {
-            AddParty()
-        }
-        .sheet(isPresented: $showingPref) {
-            SideBar()
-        }
+        
+        .sheet(isPresented: $showingAdd, onDismiss: {}, content: {AddParty()})
+        .sheet(isPresented: $showingPref, onDismiss: {}, content: {SideBar()})
     }
 }
 
 
-struct InputView_Previews: PreviewProvider {
-    @EnvironmentObject var election: Election
-    static var previews: some View {
-        InputView()
-    }
-}
+//struct InputView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        InputView()
+//    }
+//}
