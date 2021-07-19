@@ -1,6 +1,23 @@
 ## Welcome to Valgo!
 This is where information regarding Valgo, the iOS election calculator, lives. This is also where you can find Valgo's source code, available to you for free.
 
+### Features
+Valgo is an election calculator for elections utilising the Sainte-Laguë method, capable of calculating elections based on the number of votes and depending on the preferences of the election administrators.
+* Parties closest to gaining or losing a seat with the current vote distribution are indicated as such
+* As the order of awarded electoral seats are important in Sainte-Laguë style elections, every seat is numbered as it is awarded to a party.
+* Using Sainte-Laguë's modified method, with a first divisor other than 1.0, as among others Norway (1.4) and Sweden (1.2) do, is supported.
+* Valgo supports thousands of parties and seats to be awarded.
+
+### Screenshots
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 22 25](https://user-images.githubusercontent.com/20601489/126236465-d2f6fe40-21f5-4260-a8c0-b6bac74d920a.png) ![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 22 37](https://user-images.githubusercontent.com/20601489/126236468-3f13f702-d992-48b2-a518-6b0e77c04d3e.png) ![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 22 32](https://user-images.githubusercontent.com/20601489/126236470-56648858-d5d3-4a8b-b805-651df115b8fc.png)
+*Screenshots are taken using the development version of v1.0-beta.5, and the test data used is the results of the parliamentary elections of Oslo in 2017.*
+
+### Planned features
+In the future, these features will be added:
+* Export to PDF, including detailed charts and the exact quotients used
+* Importing parties and votes from Excel, in particular on macOS
+* User interface improvements for macOS and iPadOS
+
 ### Beta testing
 Would you like to participate in testing the latest beta? It is available through Apple's [TestFlight](https://testflight.apple.com/join/yuMl8zTx) service, and any testing and feedback (regarding bugs, UI, features missing, unnecessary features, etc.) is greatly appreciated.
 
