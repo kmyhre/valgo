@@ -7,9 +7,12 @@ Valgo is an election calculator for elections utilising the Sainte-Laguë method
 * As the order of awarded electoral seats are important in Sainte-Laguë style elections, every seat is numbered as it is awarded to a party.
 * Using Sainte-Laguë's modified method, with a first divisor other than 1.0, as among others Norway (1.4) and Sweden (1.2) do, is supported.
 * Valgo supports thousands of parties and seats to be awarded.
+* Currently, Valgo is supported in English and Norwegian. Please feel free to reach out if you would like to help translate Valgo to your language!
 
 ### Screenshots
-![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 22 25](https://user-images.githubusercontent.com/20601489/126236465-d2f6fe40-21f5-4260-a8c0-b6bac74d920a.png) ![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 22 37](https://user-images.githubusercontent.com/20601489/126236468-3f13f702-d992-48b2-a518-6b0e77c04d3e.png) ![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 22 32](https://user-images.githubusercontent.com/20601489/126236470-56648858-d5d3-4a8b-b805-651df115b8fc.png)
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 41 53](https://user-images.githubusercontent.com/20601489/126236663-2d0207e4-b31c-48fe-b922-f846555592a1.png)
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 41 46](https://user-images.githubusercontent.com/20601489/126236665-f988fb98-d60e-4907-80c1-cd2502babae2.png)
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 41 58](https://user-images.githubusercontent.com/20601489/126236662-b5f7d166-6dae-4a83-8a87-2d0cae232eb3.png)
 
 *Screenshots are taken using the development version of v1.0-beta.5, and the test data used is the results of the parliamentary elections of Oslo in 2017.*
 
