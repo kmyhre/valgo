@@ -3,7 +3,7 @@ This is where information regarding Valgo, the iOS election calculator, lives. T
 
 ### Features
 Valgo is an election calculator for elections utilising the Sainte-Laguë method, capable of calculating elections based on the number of votes and depending on the preferences of the election administrators.
-* Parties closest to gaining or losing a seat with the current vote distribution are indicated as such
+* Parties closest to gaining or losing a seat with the current vote distribution are indicated as such.
 * As the order of awarded electoral seats are important in Sainte-Laguë style elections, every seat is numbered as it is awarded to a party.
 * Using Sainte-Laguë's modified method, with a first divisor other than 1.0, as among others Norway (1.4) and Sweden (1.2) do, is supported.
 * Valgo supports thousands of parties and seats to be awarded.
@@ -17,9 +17,9 @@ Valgo is an election calculator for elections utilising the Sainte-Laguë method
 
 ### Planned features
 In the future, these features will be added:
-* Export to PDF, including detailed charts and the exact quotients used
-* Importing parties and votes from Excel, in particular on macOS
-* User interface improvements for macOS and iPadOS
+* Export to PDF, including detailed charts and the exact quotients used.
+* Importing parties and votes from Excel, in particular on macOS.
+* User interface improvements for macOS and iPadOS.
 
 ### Beta testing
 Would you like to participate in testing the latest beta? It is available through Apple's [TestFlight](https://testflight.apple.com/join/yuMl8zTx) service, and any testing and feedback (regarding bugs, UI, features missing, unnecessary features, etc.) is greatly appreciated.
@@ -28,4 +28,4 @@ Would you like to participate in testing the latest beta? It is available throug
 Valgo is maintained by people doing it in their free time, and without any formal training in programming. This means a lot of the code can probably be improved upon quite a bit. Feel free to open a pull request if you'd like to help out! We'll figure this out together.
 
 ### Contact
-Questions about Valgo? You can ping the maintainer on IRC: #valgo @ [OFTC](https://www.oftc.net/WebChat).
+Questions about Valgo? You can ping the maintainer on IRC: #valgo @ [OFTC](https://www.oftc.net/WebChat). You can also join the project's [Slack](https://join.slack.com/t/valgo-workspace/shared_invite/zt-t5fy8ana-IfohZz0oC33HiEzupV9r9A).
