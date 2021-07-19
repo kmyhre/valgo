@@ -10,6 +10,7 @@ Valgo is an election calculator for elections utilising the Sainte-Laguë method
 
 ### Screenshots
 ![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 22 25](https://user-images.githubusercontent.com/20601489/126236465-d2f6fe40-21f5-4260-a8c0-b6bac74d920a.png) ![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 22 37](https://user-images.githubusercontent.com/20601489/126236468-3f13f702-d992-48b2-a518-6b0e77c04d3e.png) ![Simulator Screen Shot - iPhone 12 Pro - 2021-07-20 at 00 22 32](https://user-images.githubusercontent.com/20601489/126236470-56648858-d5d3-4a8b-b805-651df115b8fc.png)
+
 *Screenshots are taken using the development version of v1.0-beta.5, and the test data used is the results of the parliamentary elections of Oslo in 2017.*
 
 ### Planned features
