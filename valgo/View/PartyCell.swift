@@ -13,7 +13,7 @@ struct partyCell: View {
     var body: some View {
         HStack {
             Circle()
-                .foregroundColor(Color(party.partyColor))
+                .foregroundColor(party.partyColor)
                 .fixedSize()
 
             

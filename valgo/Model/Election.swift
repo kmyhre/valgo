@@ -71,8 +71,8 @@ class Election: ObservableObject {
     
     // MARK: addParty
     
-    func addParty(name: String, votes: Int) {
-        partiesArray.append(Party(name: name, votes: votes))
+    func addParty(name: String, votes: Int, color: Color) {
+        partiesArray.append(Party(name: name, votes: votes, color: color))
 //        if let _ = quotients {
 //            quotients!.append(calculateQuotients(identity: currentID, originalVotes: Float(votes)))
 //        } else {

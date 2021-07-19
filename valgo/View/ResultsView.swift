@@ -54,7 +54,7 @@ struct ResultsView: View {
                         Text(currentSeat.party.partyName)
                         Circle()
                             .fixedSize()
-                            .foregroundColor(Color(currentSeat.party.partyColor))
+                            .foregroundColor(currentSeat.party.partyColor)
                     }
                 }
             }
