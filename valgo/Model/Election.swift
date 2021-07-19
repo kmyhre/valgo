@@ -73,37 +73,9 @@ class Election: ObservableObject {
     
     func addParty(name: String, votes: Int, color: Color) {
         partiesArray.append(Party(name: name, votes: votes, color: color))
-//        if let _ = quotients {
-//            quotients!.append(calculateQuotients(identity: currentID, originalVotes: Float(votes)))
-//        } else {
-//            quotients = [calculateQuotients(identity: currentID, originalVotes: Float(votes))]
-//        }
         
         print("Party added: \(name)")
     }
-    
-//    func calculateQuotients(identity: Int, originalVotes: Float) -> [(dividend: Float, quotient: Float)] {
-//
-//        var quotients: [(dividend: Float, quotient: Float)] = []
-//
-//
-//        if modifiedMethod {
-//            quotients.append((dividend: modifiedDivisor, quotient: originalVotes/modifiedDivisor) )
-//        } else {
-//            quotients.append((dividend: 1, quotient: originalVotes/1))
-//        }
-//
-//        var currentDividend: Float = 3
-//
-//        for _ in 2...seatsToAllocate {
-//            quotients.append((dividend: currentDividend, quotient: originalVotes/currentDividend))
-//            currentDividend += 2
-//        }
-//
-//        print(quotients)
-//        return quotients
-//
-//    }
     
     func printParties(parties: [Party]) {
         for party in parties {
